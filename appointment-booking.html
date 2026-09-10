@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire A Funnel Builder, Media Buyer & Copywriter For Your Shopify Brand • The Scale Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..900;1,14..32,300..900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Clean Modern Palette */
+      --canvas-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --surface-dark: #090d16;
+      --surface-elevated: #111827;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
+      --text-inverse: #ffffff;
+      
+      /* Accents */
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --primary-light: #e0f2fe;
+      --accent-emerald: #10b981;
+      --accent-emerald-dark: #059669;
+      --accent-emerald-light: #ecfdf5;
+      --accent-amber: #f59e0b;
+      --danger: #ef4444;
+      --danger-light: #fef2f2;
+      
+      /* Hairlines & Borders */
+      --hairline: #e2e8f0;
+      --hairline-dark: #1e293b;
+      
+      /* Radius */
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+      
+      /* Elevation */
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 24px -4px rgba(0,0,0,0.1);
+      --shadow-card: 0 0 0 1px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+      
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--canvas-bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      font-size: 16.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Reading Progress */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent-emerald));
+      width: 0%;
+      z-index: 1000;
+      transition: width 0.1s ease;
+    }
+
+    /* Header Nav */
+    .site-header {
+      background: rgba(9, 13, 22, 0.95);
+      backdrop-filter: blur(12px);
+      color: var(--text-inverse);
+      padding: 14px 28px;
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-mark {
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .brand-mark span {
+      color: #38bdf8;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .badge-status::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #34d399;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #34d399;
+    }
+
+    .btn-pill-primary {
+      background: var(--text-inverse);
+      color: var(--surface-dark);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 8px 20px;
+      border-radius: var(--radius-pill);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-pill-primary:hover {
+      background: #38bdf8;
+      color: #000000;
+      transform: translateY(-1px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero Section - Clean Dark Cinematic */
+    .hero-section {
+      background: linear-gradient(180deg, #090d16 0%, #111827 100%);
+      color: var(--text-inverse);
+      padding: 72px 0 64px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      color: #38bdf8;
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 24px;
+    }
+
+    .hero-headline {
+      font-family: var(--font-serif);
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 22px;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: #38bdf8;
+    }
+
+    .hero-subhead {
+      font-size: 18.5px;
+      line-height: 1.65;
+      color: #94a3b8;
+      max-width: 780px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+    }
+
+    .hero-cta-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-hero-cta {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 17px;
+      padding: 16px 36px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      box-shadow: 0 10px 25px -4px rgba(2, 132, 199, 0.4);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px -4px rgba(2, 132, 199, 0.55);
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      color: #000000;
+    }
+
+    .hero-micro-copy {
+      font-size: 13px;
+      color: #64748b;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    /* Trust Credibility Bar */
+    .trust-bar {
+      background: #0f172a;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 16px 24px;
+    }
+
+    .trust-bar-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .trust-bar-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .trust-bar-item svg {
+      width: 16px;
+      height: 16px;
+      color: #38bdf8;
+      flex-shrink: 0;
+    }
+
+    /* Main Article Container */
+    .article-wrap {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--hairline);
+      box-shadow: var(--shadow-sm);
+      padding: 56px 48px;
+      margin: 40px auto 60px;
+    }
+
+    /* Clean Content Typography */
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      line-height: 1.35;
+      color: var(--text-main);
+      margin: 48px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin: 28px 0 12px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: var(--text-muted);
+    }
+
+    strong {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    ul, ol {
+      margin-bottom: 24px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: var(--text-muted);
+    }
+
+    /* Media Image Containers */
+    .media-card {
+      margin: 32px 0;
+      background: #f8fafc;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      text-align: center;
+    }
+
+    .media-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius-sm);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .media-caption {
+      font-size: 13.5px;
+      color: var(--text-subtle);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* Callouts */
+    .callout {
+      background: #f8fafc;
+      border-left: 4px solid var(--primary);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0;
+    }
+
+    .callout-danger {
+      background: var(--danger-light);
+      border-left-color: var(--danger);
+      color: #991b1b;
+    }
+
+    .callout-success {
+      background: var(--accent-emerald-light);
+      border-left-color: var(--accent-emerald);
+      color: #065f46;
+    }
+
+    /* Pillar Cards */
+    .pillar-card {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin: 28px 0;
+      box-shadow: var(--shadow-card);
+      transition: all 0.2s ease;
+    }
+
+    .pillar-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-md);
+    }
+
+    .pillar-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .pillar-badge-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--surface-dark);
+      color: #38bdf8;
+      font-weight: 800;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .pillar-title-group h3 {
+      margin: 0;
+      font-size: 21px;
+    }
+
+    .pillar-tagline {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .pillar-specs {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 16px;
+    }
+
+    .pillar-specs li {
+      position: relative;
+      padding-left: 26px;
+      margin-bottom: 10px;
+    }
+
+    .pillar-specs li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-emerald);
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    /* Modern Table */
+    .table-responsive {
+      overflow-x: auto;
+      margin: 36px 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--hairline);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      background: #ffffff;
+    }
+
+    th, td {
+      padding: 16px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--hairline);
+      vertical-align: middle;
+    }
+
+    th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: var(--text-main);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    th.col-highlight {
+      background: #090d16;
+      color: #38bdf8;
+    }
+
+    td.col-highlight {
+      background: #f0f9ff;
+      font-weight: 700;
+      color: #0369a1;
+      border-left: 2px solid #bae6fd;
+      border-right: 2px solid #bae6fd;
+    }
+
+    /* Unit Economics Box */
+    .economics-card {
+      background: #090d16;
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin: 36px 0;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .economics-card h3 {
+      color: #ffffff;
+      margin-top: 0;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .economics-card p {
+      color: #94a3b8;
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .economics-table {
+      width: 100%;
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    .economics-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #cbd5e1;
+    }
+
+    .economics-table tr.total-row td {
+      border-top: 2px solid #38bdf8;
+      border-bottom: none;
+      font-weight: 800;
+      font-size: 16px;
+      color: #ffffff;
+      padding-top: 16px;
+    }
+
+    .text-profit { color: #34d399 !important; }
+    .text-loss { color: #f87171 !important; }
+
+    /* Grand Slam Offer Box */
+    .offer-box {
+      background: linear-gradient(135deg, #090d16 0%, #111827 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 44px;
+      margin: 48px 0;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .offer-badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-weight: 800;
+      font-size: 12px;
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 18px;
+    }
+
+    .offer-box h3 {
+      font-family: var(--font-serif);
+      font-size: 30px;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .offer-box p {
+      color: #94a3b8;
+      font-size: 16.5px;
+      max-width: 680px;
+      margin: 0 auto 28px;
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+      text-align: left;
+    }
+
+    .offer-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .offer-item h4 {
+      color: #38bdf8;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .offer-item p {
+      font-size: 13.5px;
+      color: #94a3b8;
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    .price-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 24px 0 16px;
+    }
+
+    .price-was {
+      font-size: 18px;
+      color: #64748b;
+      text-decoration: line-through;
+    }
+
+    .price-now {
+      font-size: 36px;
+      font-weight: 900;
+      color: #34d399;
+    }
+
+    /* Booking Form Section */
+    .booking-section {
+      background: #f8fafc;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      padding: 44px 36px;
+      margin: 48px 0;
+    }
+
+    .booking-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .booking-header h3 {
+      font-size: 24px;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .booking-header p {
+      color: var(--text-subtle);
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group.full {
+      grid-column: span 2;
+    }
+
+    label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--text-main);
+      background: #ffffff;
+      transition: all 0.2s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .btn-submit-form {
+      width: 100%;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      border: none;
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 16.5px;
+      padding: 18px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 8px 16px rgba(2, 132, 199, 0.3);
+    }
+
+    .btn-submit-form:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(2, 132, 199, 0.45);
+    }
+
+    .form-footer-privacy {
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--text-subtle);
+      margin-top: 14px;
+    }
+
+    /* FAQ Accordion */
+    .faq-card {
+      background: #ffffff;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-toggle {
+      padding: 18px 24px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-toggle:hover {
+      background: #f8fafc;
+    }
+
+    .faq-icon {
+      font-size: 18px;
+      color: var(--primary);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-body {
+      padding: 0 24px 20px;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.65;
+      display: none;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 14px;
+    }
+
+    .faq-card.active .faq-body {
+      display: block;
+    }
+
+    .faq-card.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* Bio Section */
+    .bio-box {
+      display: flex;
+      gap: 24px;
+      background: #f8fafc;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      margin: 44px 0 20px;
+      align-items: center;
+    }
+
+    .bio-img {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .bio-details h4 {
+      font-size: 18px;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .bio-role {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .bio-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #090d16;
+      color: #64748b;
+      padding: 44px 24px;
+      text-align: center;
+      font-size: 13.5px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Confirmation Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(9, 13, 22, 0.75);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      max-width: 480px;
+      width: 100%;
+      padding: 36px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-icon-check {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-emerald-light);
+      color: var(--accent-emerald);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .btn-modal-dismiss {
+      background: var(--surface-dark);
+      color: #ffffff;
+      border: none;
+      font-family: inherit;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    /* Mobile Queries */
+    @media (max-width: 768px) {
+      .site-header { padding: 12px 18px; }
+      .badge-status { display: none; }
+      .hero-section { padding: 52px 0 44px; }
+      .hero-headline { font-size: 27px; line-height: 1.3; }
+      .hero-subhead { font-size: 16.5px; }
+      .btn-hero-cta { font-size: 15px; padding: 15px 28px; width: 100%; }
+      .trust-bar-inner { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .article-wrap { padding: 32px 20px; margin-top: 20px; border-radius: var(--radius-md); }
+      h2 { font-size: 23px; }
+      .offer-grid { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; gap: 0; }
+      .form-group.full { grid-column: span 1; }
+      .bio-box { flex-direction: column; text-align: center; }
+      .offer-box { padding: 28px 18px; }
+      .offer-box h3 { font-size: 24px; }
+      .price-now { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a href="#" class="brand-mark">THE SCALE <span>ENGINE</span></a>
+    <div class="header-actions">
+      <div class="badge-status">Only 3 Audit Spots Open This Month</div>
+      <a href="#schedule-audit" class="btn-pill-primary">Schedule Audit →</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-eyebrow">The 3-in-1 D2C Growth Division • For Shopify Brands</div>
+      <h1 class="hero-headline">
+        Looking To Hire A Funnel Builder, Media Buyer &amp; Copywriter For Your Shopify Brand? <em>Stop Juggling 3 Disconnected Vendors.</em>
+      </h1>
+      <p class="hero-subhead">
+        Install an elite Direct-Response Acquisition Division into your D2C brand — where a veteran Media Buyer and Conversion Strategist (> $400k+ in audited Meta spend) takes 100% unified ownership of your 8-Block Funnel, Algorithmic Bidding, and Mechanism Copywriting in 30 days.
+      </p>
+
+      <div class="hero-cta-wrap">
+        <a href="#schedule-audit" class="btn-hero-cta">
+          <span>SCHEDULE YOUR 45-MINUTE 1:1 AUDIT</span>
+          <span>→</span>
+        </a>
+        <div class="hero-micro-copy">
+          <span>🔒 Strict NDA Protection</span>
+          <span>•</span>
+          <span>⚡ Live Zoom Teardown</span>
+          <span>•</span>
+          <span>🎯 $0 Complimentary</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-bar-item">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>$400k+ Audited Meta Spend</span>
+      </div>
+      <div class="trust-bar-item">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <span>8-Block Direct-Response Protocol</span>
+      </div>
+      <div class="trust-bar-item">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <span>3.5%+ Cold CVR Benchmark</span>
+      </div>
+      <div class="trust-bar-item">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <span>100% Risk-Reversal Guarantee</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Body -->
+  <main class="container">
+    <article class="article-wrap">
+
+      <!-- Section 1: Search Context -->
+      <section>
+        <h2>1. You Searched Google Because Your Current Acquisition Setup Is Broken</h2>
+        <p>If you are an ambitious e-commerce founder or growth executive running a direct-to-consumer brand, you didn't arrive here by accident.</p>
+        <p>You typed a search query into Google because you are feeling the intense margin squeeze happening across Tier-1 markets (US, UK, CA, AU) right now:</p>
+        
+        <ul>
+          <li><strong>Tier-1 Meta CPMs have surged past $50:</strong> Blended Customer Acquisition Cost (CAC) is up 35% to 50% year-over-year.</li>
+          <li><strong>Your Shopify PDP is a conversion ceiling:</strong> Cold social traffic sent directly to a standard Product Detail Page bounces 98% of visitors, trapping your store conversion rate between 1.2% and 1.8%.</li>
+          <li><strong>UGC video ads burn out in 7 to 10 days:</strong> You spend $2,500 on creator shoots, find a temporary winning hook, and watch it die within a week—forcing you onto an exhausting creative treadmill.</li>
+          <li><strong>Scaling attempts trigger margin collapse:</strong> Every time you increase daily spend from $500/day to $2,000/day on Lowest-Cost bidding, Meta burns through your budget during auction spikes, leaving you with compressed net profit margins below 8%.</li>
+        </ul>
+
+        <div class="media-card">
+          <img src="https://statics.pancake.vn/web-media-263/88/ff/8e/41/101f503c84f0dbc1d8a781efcf0db397db2582e29e325bac77d265b8.jpg" alt="Meta Ads Burn">
+          <div class="media-caption">Algorithmic Lowest-Cost bidding burns through budgets during volatility spikes with zero contribution margin accountability.</div>
+        </div>
+
+        <p>You know you need three core capabilities to fix this: <strong>A high-converting Funnel, aggressive Media Buying, and persuasive Direct-Response Copywriting</strong>. The critical decision is: <em>How should you acquire these capabilities?</em></p>
+      </section>
+
+      <!-- Section 2: The 3 Traditional Traps -->
+      <section>
+        <h2>2. The 3 Traditional Hiring Traps: Why Conventional Models Always Fail</h2>
+        <p>Most founders evaluate three traditional hiring paths. Here is the brutal reality of what happens with each:</p>
+
+        <div class="media-card">
+          <img src="https://statics.pancake.vn/web-media-263/da/44/5d/02/53d7604378bb4800da3392b7d8a32289c268974ffbffd75027b63624.jpg" alt="Cross-vendor friction">
+          <div class="media-caption">The consequence of fragmented hiring: Banned accounts, escalating CAC, and endless cross-vendor finger-pointing.</div>
+        </div>
+
+        <div class="callout callout-danger">
+          <strong>Trap #1: Hiring 3 Separate Freelancers (Upwork / Twitter / Referrals)</strong><br>
+          You hire a freelance media buyer, a contract copywriter, and a Shopify page developer. On paper, it seems flexible. In reality, it is a management nightmare:<br>
+          • The <strong>Media Buyer</strong> is merely a button-pusher who doesn't understand consumer psychology or product mechanisms.<br>
+          • The <strong>Copywriter</strong> writes generic marketing fluff without understanding mobile page UX or Meta’s compliance filters.<br>
+          • The <strong>Web Developer</strong> builds a heavy page that takes 4.2 seconds to load on mobile devices.<br>
+          <em>When CAC doubles, nobody takes responsibility. They point fingers in a circle while you foot the bill.</em>
+        </div>
+
+        <div class="callout">
+          <strong>Trap #2: Signing a Traditional D2C Agency Retainer ($4,000 – $7,000/mo)</strong><br>
+          You sign a contract with a flashy e-commerce agency. But once the contract is executed:<br>
+          • Your account is handed off to a junior account manager handling 7 other brands.<br>
+          • They deliver weekly slide decks celebrating vanity metrics (impressions, link clicks, outbound CTR).<br>
+          • <strong>The Fatal Conflict of Interest:</strong> Their fee is tied to a retainer or % of gross ad spend. They are financially incentivized to push you to spend more capital—regardless of whether your store generates positive net contribution margin!
+        </div>
+
+        <div class="callout">
+          <strong>Trap #3: Building an In-House Unit ($15,000+/month in Fixed Payroll)</strong><br>
+          You hire 3 full-time employees: a copywriter ($4.5k/mo), a designer/developer ($5k/mo), and a media buyer ($6k/mo). Add payroll taxes, software subscriptions, and equipment, and fixed overhead explodes by <strong>$18,000+ every month</strong>. Moreover, generalist hires rarely possess deep direct-response mechanism frameworks required to systematically reframe cold buyer skepticism.
+        </div>
+      </section>
+
+      <!-- Section 3: The Growth Trinity Solution -->
+      <section>
+        <h2>3. The Modern Solution: The Growth Trinity Partner</h2>
+        <p>To scale past $100,000/month in modern Tier-1 markets, you cannot rely on disconnected vendors or bloated retainers. You need an integrated <strong>Direct-Response Growth Partner</strong> that unifies all three critical acquisition pillars under one roof—led by engineering rigor and direct P&L accountability:</p>
+
+        <div class="media-card">
+          <img src="https://statics.pancake.vn/web-media-263/d0/73/46/dd/505867d627a3ebc559872d933e236ad46c0431df830bfb739322944e.jpg" alt="The Scale Engine Architecture">
+          <div class="media-caption">The Scale Engine Framework: Integrating Funnel Architecture, Media Buying, and Direct-Response Copywriting.</div>
+        </div>
+
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <div class="pillar-badge-num">01</div>
+            <div class="pillar-title-group">
+              <span class="pillar-tagline">Conversion Architecture</span>
+              <h3>Funnel Builder (Direct-Response Advertorials)</h3>
+            </div>
+          </div>
+          <p>We do not build generic Shopify PDPs that bounce 98% of cold traffic. We design, code, and deploy <strong>Custom 8-Block Direct-Response Advertorial Pre-Landers</strong> (built natively in Replo or high-performance custom code):</p>
+          <ul class="pillar-specs">
+            <li><strong>Sub-1.5s Mobile Load Speed:</strong> Zero layout shift, lightweight code, engineered specifically for mobile social traffic on 4G/5G networks.</li>
+            <li><strong>The 8-Block Psychological Architecture:</strong> Guides skeptical cold readers from symptom validation to root-cause diagnosis, unique mechanism discovery, and pre-loaded cart checkout—lifting cold conversion rates from 1.4% to <strong>3.5% – 5.0%+</strong>.</li>
+            <li><strong>Server-Side Meta CAPI Architecture:</strong> Clean Conversions API server-to-server tracking bypassing iOS tracking loss, feeding 100% clean purchase attribution data back to Meta’s machine learning.</li>
+          </ul>
+          <div class="media-card" style="margin-top: 16px;">
+            <img src="https://statics.pancake.vn/web-media-263/87/82/28/a5/382d9cded19d914890fd64b0b15d123556d5e8168875d4783bd2bb1a.jpg" alt="8-Block Architecture">
+            <div class="media-caption">The 8-Block Direct-Response page architecture designed to educate and convert cold traffic before cart entry.</div>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <div class="pillar-badge-num">02</div>
+            <div class="pillar-title-group">
+              <span class="pillar-tagline">Capital Protection &amp; Scale</span>
+              <h3>Media Buyer (Algorithmic Stop-Loss Architecture)</h3>
+            </div>
+          </div>
+          <p>With over <strong>$400,000 (10B+ VNĐ) in audited Meta spend</strong>, we eliminate reckless budget dumping and replace it with institutional auction engineering:</p>
+          <ul class="pillar-specs">
+            <li><strong>Consolidated CBO Campaign Structure:</strong> Eliminates ad set duplication, consolidating data into high-velocity CBO structures that exit Meta’s 50-conversion learning phase in under 72 hours.</li>
+            <li><strong>The Cost Cap / Bid Cap Financial Stop-Loss:</strong> We install mathematical bid ceilings directly into the auction algorithm. If Meta cannot locate a ready-to-buy customer within your target CAC threshold, <strong>the algorithm is programmatically restricted from spending your money</strong>.</li>
+            <li><strong>Zero Midnight Budget Bleed:</strong> You sleep soundly knowing your ad spend will never be dumped into phantom bot traffic or low-quality overnight inventory.</li>
+          </ul>
+          <div class="media-card" style="margin-top: 16px;">
+            <img src="https://statics.pancake.vn/web-media-263/61/44/30/18/eca0d336416252abb38e1494d6551f3b07e7d4f255fd9dc0e134dd5f.jpg" alt="Cost Cap Safety Valve">
+            <div class="media-caption">The Cost Cap Stop-Loss mechanism: An algorithmic firewall protecting your cash reserves around the clock.</div>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-header">
+            <div class="pillar-badge-num">03</div>
+            <div class="pillar-title-group">
+              <span class="pillar-tagline">Persuasion Engine</span>
+              <h3>Direct-Response Copywriting &amp; Creative Strategy</h3>
+            </div>
+          </div>
+          <p>This is our insurmountable competitive moat:</p>
+          <ul class="pillar-specs">
+            <li><strong>Mechanism-Driven Storytelling:</strong> We deconstruct your product's unique mechanism of action (UMP/UMS), explain why past alternative solutions failed, and present an undeniable logical case for why your product solves their core problem.<br>
+            <em style="font-size: 13px; color: var(--text-subtle);">*(Special Advantage for Health &amp; Wellness: Founder Vũ Ngọc Hoàng's formal background in pharmaceutical sciences provides an extra analytical edge in translating complex functional formulations into clear, compliant consumer angles without triggering Meta's sensitive health policy scanners).*</em></li>
+            <li><strong>100% Meta &amp; FTC Compliance:</strong> We eliminate aggressive "miracle" claims, policy-violating buzzwords, and deceptive before-and-after imagery. Your campaigns run smoothly with zero account bans.</li>
+            <li><strong>15 to 20 Visual AI Metaphors:</strong> Proprietary AI-generated conceptual visualizations (illustrating product absorption, functional micro-actions, or biological balance) that stop the thumb scroll and outlast standard UGC videos by 4x.</li>
+          </ul>
+          <div class="media-card" style="margin-top: 16px;">
+            <img src="https://statics.pancake.vn/web-media-263/c2/ac/f7/b4/fcbaba9bfdcd0dd453a37d7058db7d6f9e885f48f1e0d43e25ad701a.jpg" alt="Visual AI Metaphor">
+            <div class="media-caption">Proprietary Visual AI Metaphors illustrating product mechanisms—100% compliant with Meta ad policy.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Comparison Table -->
+      <section>
+        <h2>4. The 9-Dimensional Strategic Comparison Matrix</h2>
+        <p>If you are comparing our Growth Trinity model against the alternatives you found on Google, use this 9-point evaluation rubric:</p>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Evaluation Dimension</th>
+                <th>3 Freelancers (Trio)</th>
+                <th>Traditional D2C Agency</th>
+                <th>In-House Team</th>
+                <th class="col-highlight">The Scale Engine Partner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Strategic &amp; Mechanism Depth</strong></td>
+                <td>Superficial glance</td>
+                <td>Cookie-cutter templates</td>
+                <td>Rare specialized hire</td>
+                <td class="col-highlight"><strong>Deep mechanism deconstruction</strong>, problem-first rigor</td>
+              </tr>
+              <tr>
+                <td><strong>2. Direct-Response Funnel Mastery</strong></td>
+                <td>Cannot write copy</td>
+                <td>Aesthetic design; low CVR</td>
+                <td>Generic theme edits</td>
+                <td class="col-highlight"><strong>Custom 8-Block Advertorials, 3.5%+ CVR targets</strong></td>
+              </tr>
+              <tr>
+                <td><strong>3. Media Buying Architecture</strong></td>
+                <td>Button-pushing</td>
+                <td>Pushes budget to earn % fee</td>
+                <td>Default Lowest-Cost / ASC</td>
+                <td class="col-highlight"><strong>CBO Consolidation + Cost Cap Stop-Loss</strong></td>
+              </tr>
+              <tr>
+                <td><strong>4. Direct-Response Copywriting</strong></td>
+                <td>Clickbait hooks</td>
+                <td>Re-hashes competitor copy</td>
+                <td>Generic marketing copy</td>
+                <td class="col-highlight"><strong>Mechanism-driven, problem-first persuasion</strong></td>
+              </tr>
+              <tr>
+                <td><strong>5. Creative Asset Engineering</strong></td>
+                <td>Steals TikTok clips</td>
+                <td>$3k+ UGC shoots (die in 7d)</td>
+                <td>Repetitive iPhone video</td>
+                <td class="col-highlight"><strong>15-20 Bespoke Visual AI Metaphors</strong></td>
+              </tr>
+              <tr>
+                <td><strong>6. Net Margin Accountability</strong></td>
+                <td>Zero accountability</td>
+                <td>Cares about gross GMV / fee</td>
+                <td>Fixed salary regardless of P&L</td>
+                <td class="col-highlight"><strong>Obsessed with Contribution Margin &amp; Net Cash</strong></td>
+              </tr>
+              <tr>
+                <td><strong>7. Cross-Functional Synergy</strong></td>
+                <td>100% disconnected</td>
+                <td>Internal department silos</td>
+                <td>Communication friction</td>
+                <td class="col-highlight"><strong>3-in-1 Unified Division: 1 Point of Contact</strong></td>
+              </tr>
+              <tr>
+                <td><strong>8. Speed to Deployment</strong></td>
+                <td>6 to 12 weeks</td>
+                <td>4 to 8 weeks onboarding</td>
+                <td>3 to 6 months to train</td>
+                <td class="col-highlight"><strong>Complete growth engine deployed in 30 Days</strong></td>
+              </tr>
+              <tr>
+                <td><strong>9. Downside Risk Protection</strong></td>
+                <td>You absorb 100% loss</td>
+                <td>Non-refundable contract</td>
+                <td>High severance &amp; payroll risk</td>
+                <td class="col-highlight"><strong>100% Money-Back Risk Reversal Guarantee</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5: Unit Economics Box -->
+      <section>
+        <div class="economics-card">
+          <h3>The Math of Margin Recovery: Unit Economics</h3>
+          <p>Consider what happens to contribution margin when an integrated 8-Block Advertorial and Cost Cap Stop-Loss replaces a transactional PDP:</p>
+
+          <table class="economics-table">
+            <thead>
+              <tr>
+                <th style="color: #94a3b8; background: transparent;">METRIC ($30,000 MONTHLY AD SPEND)</th>
+                <th style="color: #94a3b8; background: transparent;">STANDARD PDP (BEFORE)</th>
+                <th style="color: #38bdf8; background: transparent;">8-BLOCK SYSTEM (AFTER)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Meta Ad Spend</td>
+                <td>$30,000</td>
+                <td>$30,000</td>
+              </tr>
+              <tr>
+                <td>Store Conversion Rate (CVR)</td>
+                <td>1.40%</td>
+                <td class="text-profit">3.60% (+157% lift)</td>
+              </tr>
+              <tr>
+                <td>Average Order Value (AOV)</td>
+                <td>$75.00</td>
+                <td>$92.00 (bundle stack)</td>
+              </tr>
+              <tr>
+                <td>Blended CAC</td>
+                <td>$58.50</td>
+                <td class="text-profit">$38.20 (-35% reduction)</td>
+              </tr>
+              <tr>
+                <td>Gross Revenue Generated</td>
+                <td>$38,400</td>
+                <td class="text-profit">$72,220 (+88% revenue)</td>
+              </tr>
+              <tr>
+                <td>Gross Margin (75%)</td>
+                <td>$28,800</td>
+                <td>$54,165</td>
+              </tr>
+              <tr>
+                <td>Ad Spend Deducted</td>
+                <td>-$30,000</td>
+                <td>-$30,000</td>
+              </tr>
+              <tr class="total-row">
+                <td>NET CONTRIBUTION MARGIN</td>
+                <td class="text-loss">-$1,200 (NET LOSS)</td>
+                <td class="text-profit">+$24,165 (NET PROFIT)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 6: Grand Slam Offer Box -->
+      <section>
+        <div class="offer-box">
+          <div class="offer-badge">COMPLIMENTARY STRATEGIC CONSULTATION</div>
+          <h3>1:1 Forensic Funnel &amp; Ad Account Audit (45-Minute Zoom Session)</h3>
+          <p>A private, live teardown conducted directly with Vũ Ngọc Hoàng to uncover the exact auction leaks and drop-offs draining your margins.</p>
+
+          <div class="media-card" style="background: transparent; border: none; padding: 0; margin: 20px 0;">
+            <img src="https://statics.pancake.vn/web-media-263/80/6f/66/5c/dcc30580fa5c8f8efef8525cc8df664709d80fa925903db0be7e160b.jpg" alt="Executive Audit Session" style="max-width: 580px; border-radius: 8px;">
+          </div>
+
+          <div class="offer-grid">
+            <div class="offer-item">
+              <h4>1. Live Ad Account Teardown</h4>
+              <p>We screen-share in your Meta Ads Manager to identify auction bidding leaks and creative fatigue causes.</p>
+            </div>
+            <div class="offer-item">
+              <h4>2. Shopify Funnel &amp; PDP Inspection</h4>
+              <p>We audit visitor drop-offs, tracking latency, and map out an 8-Block Advertorial wireframe for your hero SKU.</p>
+            </div>
+            <div class="offer-item">
+              <h4>3. Custom Profit Recovery Blueprint</h4>
+              <p>Walk away with an actionable mathematical roadmap outlining the exact bid caps and angles needed to scale.</p>
+            </div>
+          </div>
+
+          <div class="price-strip">
+            <span class="price-was">Standard Fee: $500 USD</span>
+            <span class="price-now">FREE ($0 USD)</span>
+          </div>
+          <p style="font-size: 13.5px; color: #94a3b8; margin-bottom: 24px;">(Reserved for 5 to 10 qualified Shopify D2C founders spending $10,000+/mo on Meta Ads)</p>
+
+          <a href="#schedule-audit" class="btn-hero-cta" style="font-size: 16px; padding: 16px 36px;">APPLY FOR YOUR 45-MINUTE AUDIT NOW →</a>
+        </div>
+      </section>
+
+      <!-- Section 7: Scope of Work & Guarantee -->
+      <section>
+        <h2>5. The Turnkey 30-Day Scale Engine Pilot &amp; Risk Reversal</h2>
+        <p>If both parties agree there is strong alignment following your audit call, we will invite your brand into our <strong>Turnkey 30-Day Pilot ($1,500 USD Flat Fee)</strong>:</p>
+
+        <ul>
+          <li><strong>Week 1 (Infrastructure &amp; Mechanism Teardown):</strong> Full Meta CAPI server-side audit, business manager hygiene, product active breakdown, and unique mechanism brief lock.</li>
+          <li><strong>Week 2 (Copywriting &amp; Funnel Engineering):</strong> Complete 8-Block Direct-Response Advertorial copy, sub-1.5s mobile landing page build, and cart sync.</li>
+          <li><strong>Week 3 (Visual AI Assets &amp; Bidding Architecture):</strong> Generation of 15 to 20 proprietary Visual AI Metaphors, CBO campaign assembly, and Cost Cap stop-loss calibration.</li>
+          <li><strong>Week 4 (Live Testing &amp; Conversion Optimization):</strong> Live traffic trials, bid rule calibration, validation of CVR benchmarks (&ge; 3.5%), and full SOP handover.</li>
+        </ul>
+
+        <div class="callout callout-success">
+          <strong style="color: #065f46; font-size: 17px;">OUR 100% CLIENT PROTECTION GUARANTEE:</strong><br>
+          If, within 30 days of initiating the Pilot, our custom 8-block direct-response page, bespoke Visual AI asset package, and CBO Cost Cap bidding architecture are not fully delivered to your exact technical SOW specifications — <strong>We will refund 100% of your pilot fee immediately. No hurdles, no excuses, no hard feelings.</strong>
+        </div>
+      </section>
+
+      <!-- Section 8: Intake Booking Form -->
+      <section id="schedule-audit" class="booking-section">
+        <div class="booking-header">
+          <div class="badge-status" style="margin-bottom: 12px;">APPLICATION BRIEF</div>
+          <h3>Schedule Your 1:1 Forensic Funnel &amp; Ad Account Audit</h3>
+          <p>Please submit your brand metrics below so we can prepare tailored audit assets prior to our Zoom session.</p>
+        </div>
+
+        <form id="auditForm" onsubmit="handleAuditSubmit(event)">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="founderName">Full Name &amp; Role *</label>
+              <input type="text" id="founderName" placeholder="e.g., David Chen, Co-Founder & CEO" required>
+            </div>
+
+            <div class="form-group">
+              <label for="workEmail">Work Email Address *</label>
+              <input type="email" id="workEmail" placeholder="david@yourbrand.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="directPhone">Direct Phone / WhatsApp *</label>
+              <input type="tel" id="directPhone" placeholder="+1 (555) 019-2834" required>
+            </div>
+
+            <div class="form-group">
+              <label for="storeUrl">Brand Store URL *</label>
+              <input type="url" id="storeUrl" placeholder="https://yourbrand.com" required>
+            </div>
+
+            <div class="form-group full">
+              <label for="monthlySpend">Average Monthly Meta Ad Spend *</label>
+              <select id="monthlySpend" required>
+                <option value="">-- Please select your current ad spend range --</option>
+                <option value="10-25k">$10,000 - $25,000 / month</option>
+                <option value="25-50k">$25,000 - $50,000 / month</option>
+                <option value="50-100k">$50,000 - $100,000 / month</option>
+                <option value="gt100k">$100,000+ / month</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="failedOption">Which of these hiring options has failed you in the past?</label>
+              <select id="failedOption">
+                <option value="freelancers">Hired freelancers who blamed each other when ROAS dropped</option>
+                <option value="agency">Hired a traditional D2C agency that collected retainers without delivering profit</option>
+                <option value="inhouse">Tried building in-house but struggled with mechanism copy & CVR</option>
+                <option value="none">First time seeking an external growth partner</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="auditPriority">Your #1 Priority For The 45-Minute Audit *</label>
+              <textarea id="auditPriority" rows="3" placeholder="e.g., We want to replace our low-converting PDP with an 8-Block Advertorial, stop creative fatigue, and install Cost Cap stop-losses so we can scale spend safely..." required></textarea>
+            </div>
+
+            <div class="form-group full">
+              <label for="timeWindow">Preferred Time Window for 45-Minute Zoom Call *</label>
+              <select id="timeWindow" required>
+                <option value="">-- Select preferred time window --</option>
+                <option value="us-morning">US Morning (9:00 AM - 12:00 PM EST / 6:00 AM - 9:00 AM PST)</option>
+                <option value="us-afternoon">US Afternoon (1:00 PM - 5:00 PM EST / 10:00 AM - 2:00 PM PST)</option>
+                <option value="uk-europe">UK & Europe Business Hours (9:00 AM - 5:00 PM GMT)</option>
+                <option value="au-nz">Australia / Asia-Pacific Hours (10:00 AM - 4:00 PM AEST)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit-form">
+            <span>SUBMIT APPLICATION &amp; CONFIRM 1:1 AUDIT SPOT →</span>
+          </button>
+          
+          <div class="form-footer-privacy">
+            🔒 All financial metrics, store data, and customer lists are kept strictly confidential under our standard Non-Disclosure Agreement (NDA).
+          </div>
+        </form>
+      </section>
+
+      <!-- Section 9: FAQ Accordion -->
+      <section>
+        <h2>6. Frequently Asked Questions (FAQ)</h2>
+
+        <div class="faq-card">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <span>Can an overseas growth team write native Tier-1 direct-response copy that converts US and UK consumers?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-body">
+            Yes—our copy focuses on <strong>deep psychological mechanisms and problem-agitation-solution frameworks</strong>, not superficial slang. We analyze customer voice (VOC) databases, customer reviews, and market alternatives to address the buyer's exact emotional skepticism, using sharp, compelling direct-response English that commands high conversion rates.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <span>How does an 8-Block Advertorial compare to our current Shopify Product Detail Page (PDP)?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-body">
+            A standard PDP is built for warm, high-intent traffic that already knows what they want. When you send cold social traffic to a PDP, 98% of people bounce because they are forced to make an immediate buying decision without being educated. An 8-Block Advertorial acts as a pre-sale bridge: it validates their chronic problem, reframes their beliefs, introduces your unique mechanism, and builds overwhelming proof before directing them to a pre-loaded cart.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <span>How do Cost Caps prevent cash bleed during scale?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-body">
+            With Meta’s default Lowest-Cost bidding, Meta will spend your daily budget no matter what—even if CPMs triple or conversion rates tank. With Cost Caps, you set a hard mathematical ceiling (e.g., maximum $40 CAC). If Meta cannot locate buyers at or below that efficiency target, <strong>the algorithm halts ad delivery</strong>. It acts as an automated 24/7 stop-loss on your cashflow.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <span>What landing page tech stack do you use?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-body">
+            We build directly inside your existing e-commerce ecosystem. Our preferred landing page frameworks are <strong>Replo</strong> (Shopify-native visual direct-response builder) or lightweight custom headless HTML. Both options connect directly to your Shopify checkout, Klaviyo tracking, and third-party attribution tools (Triple Whale / Northbeam) with zero tech debt.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-toggle" onclick="toggleFaq(this)">
+            <span>Is our ad account data, creative assets, and customer list kept strictly confidential?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-body">
+            Absolute confidentiality is protected under a legally binding Non-Disclosure Agreement (NDA). We treat your financial metrics, customer data, and proprietary formulas with institutional-grade privacy. We never share your data with competitors or third parties.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: About Founder -->
+      <section>
+        <div class="bio-box">
+          <img src="https://statics.pancake.vn/web-media-263/6c/11/1b/03/7b2db047bcdcf6295813a0f9ddf122b0de1bfd8b2fd3e06caffa0240.jpg" alt="Vũ Ngọc Hoàng" class="bio-img">
+          <div class="bio-details">
+            <h4>Vũ Ngọc Hoàng</h4>
+            <div class="bio-role">Founder &amp; Chief Acquisition Strategist, The Scale Engine</div>
+            <p class="bio-desc">Senior Performance Media Buyer (> $400,000+ Meta Spend) &amp; Conversion Architect. With a formal background in pharmaceutical sciences and 8+ years in direct-response marketing, Hoàng has engineered acquisition funnels for high-growth e-commerce brands, health clinics, and premium consumer goods. By merging analytical rigor with algorithmic auction mechanics, his frameworks scale brands sustainably while defending net contribution margins.</p>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p style="color: #cbd5e1; font-weight: 700; margin-bottom: 6px;">THE SCALE ENGINE ACQUISITION PARTNERS</p>
+      <p>© 2026 The Scale Engine. All Rights Reserved. Designed for High-Growth Shopify D2C Brands.</p>
+      <p style="margin-top: 8px; font-size: 12px; color: #475569;">
+        Disclaimer: Results depend on product-market fit, unit economics, and operational alignment. We do not make unsubstantiated revenue guarantees.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal Confirmation -->
+  <div id="applicationModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-icon-check">✓</div>
+      <h3 style="font-size: 22px; color: #0f172a; margin-bottom: 8px;">APPLICATION RECEIVED!</h3>
+      <p style="font-size: 14.5px; color: #475569; line-height: 1.6; margin-bottom: 16px;">
+        Thank you! Vũ Ngọc Hoàng's team has received your application brief. We will review your store metrics and send a personalized calendar link via email/WhatsApp within <strong>4 business hours</strong> to confirm your 45-minute Zoom session.
+      </p>
+      <button class="btn-modal-dismiss" onclick="closeModal()">Got It, Dismiss</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Interactions -->
+  <script>
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const pb = document.getElementById('progress-bar');
+      if (pb) pb.style.width = scrolled + '%';
+    });
+
+    // Toggle FAQ Accordion
+    function toggleFaq(el) {
+      const card = el.parentElement;
+      card.classList.toggle('active');
+    }
+
+    // Handle Form Submit
+    function handleAuditSubmit(e) {
+      e.preventDefault();
+      document.getElementById('applicationModal').style.display = 'flex';
+    }
+
+    // Close Modal
+    function closeModal() {
+      document.getElementById('applicationModal').style.display = 'none';
+      document.getElementById('auditForm').reset();
+    }
+  </script>
+
+
+<script>
+(function() {
+  var iframeId = 'scale-engine-audit-iframe';
+  function sendHeight() {
+    var h = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight,
+      document.documentElement.offsetHeight,
+      document.body.offsetHeight
+    );
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'resize', height: h, source: iframeId }, '*');
+    }
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'request-resize') sendHeight();
+  });
+  setTimeout(sendHeight, 150);
+  setTimeout(sendHeight, 500);
+  setTimeout(sendHeight, 1200);
+  setTimeout(sendHeight, 2500);
+  if (window.MutationObserver) {
+    var observer = new MutationObserver(sendHeight);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+  }
+
+  // Anchor click handling
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (a && a.getAttribute('href') && a.getAttribute('href').startsWith('#')) {
+      var targetId = a.getAttribute('href').substring(1);
+      var targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+        var rect = targetEl.getBoundingClientRect();
+        var absTop = window.pageYOffset + rect.top;
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'anchor-click', offset: absTop, source: iframeId }, '*');
+        }
+      }
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
