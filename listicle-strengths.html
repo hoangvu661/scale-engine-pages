@@ -495,14 +495,7 @@
       box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
     }
     
-    footer {
-      background: #0f172a;
-      color: #64748b;
-      padding: 48px 0;
-      font-size: 13px;
-      text-align: center;
-      border-top: 1px solid #1e293b;
-    }
+    footer { background: #090d16; color: #64748b; padding: 48px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 13px; text-align: center; }
     footer a {
       color: #94a3b8;
       text-decoration: none;
@@ -535,6 +528,15 @@
       }
     }
 
+  
+    /* Form Section Specific Reset */
+    #form h2 {
+      border: none !important;
+      border-left: none !important;
+      padding: 0 !important;
+      margin: 0 0 12px 0 !important;
+      text-align: center !important;
+    }
   </style>
 </head>
 <body>
@@ -809,32 +811,33 @@
   
 
   
+  <!-- Section: Application & Intake Form (#form) -->
   <!-- Section 11: Application & Intake Form (#form) -->
-  <section class="section" id="form" style="background: #0f172a; padding: 72px 0 80px; color: #f8fafc; border-top: 1px solid #1e293b;">
+  <section class="section" id="form" style="background: #090d16; padding: 72px 0 80px; color: #f8fafc; border-top: 1px solid rgba(255,255,255,0.08);">
     <div style="max-width: 960px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
       
       <!-- Section Header -->
       <div style="text-align: center; margin-bottom: 40px;">
-        <div style="display: inline-block; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 9999px; margin-bottom: 14px;">
+        <div style="display: inline-block; background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 9999px; margin-bottom: 14px;">
           100% FREE • NO OBLIGATION • NO ZOOM CALLS
         </div>
-        <h2 style="font-size: clamp(26px, 4vw, 36px); font-weight: 800; color: #ffffff; line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.02em;">
+        <h2 style="font-size: clamp(26px, 4vw, 36px); font-weight: 800; color: #ffffff; line-height: 1.25; margin-bottom: 12px; letter-spacing: -0.02em; border: none !important; padding: 0 !important; margin: 0 0 12px 0 !important; text-align: center !important;">
           Request Your Free 1:1 Consultation
         </h2>
         <p style="font-size: 16px; color: #94a3b8; max-width: 640px; margin: 0 auto; line-height: 1.6;">
-          Leave your business details below. Senior Performance Media Buyer Vũ Ngọc Hoàng will personally review your offer and message you directly via WhatsApp or Email within 24 hours.
+          Leave your business details below. Vũ Ngọc Hoàng will personally review your offer and message you directly via WhatsApp or Email within 24 hours with custom recommendations.
         </p>
       </div>
 
-      <!-- 2-Column Grid: Left Card (420px) + Right Form (456px) = 908px inside 960px container -->
+      <!-- 2-Column Grid: 420px + 456px = 908px inside 960px container -->
       <div class="consult-grid" style="display: grid; grid-template-columns: 420px 456px; gap: 32px; align-items: start; justify-content: center; box-sizing: border-box;">
         
         <!-- Left Column: Value / Plan Card -->
-        <div class="consult-card" style="background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 32px 28px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35); box-sizing: border-box;">
+        <div class="consult-card" style="background: #0e172a; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 32px 28px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45); box-sizing: border-box;">
           <div style="font-size: 12px; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
             THE DONE-FOR-YOU PARTNER
           </div>
-          <div style="font-size: 44px; font-weight: 800; color: #ffffff; line-height: 1.1; margin-bottom: 4px; letter-spacing: -0.02em;">
+          <div style="font-size: 44px; font-weight: 800; color: #3b82f6; line-height: 1.1; margin-bottom: 4px; letter-spacing: -0.02em;">
             $699 <span style="font-size: 18px; font-weight: 500; color: #94a3b8;">/month</span>
           </div>
           <div style="font-size: 14px; color: #94a3b8; margin-bottom: 22px; padding-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
@@ -842,38 +845,38 @@
           </div>
           
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 13px;">
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #f1f5f9; line-height: 1.45;">
-              <span style="color: #38bdf8; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #e2e8f0; line-height: 1.45;">
+              <span style="color: #3b82f6; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
               <span>1 Master direct-response conversion funnel deployed</span>
             </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #f1f5f9; line-height: 1.45;">
-              <span style="color: #38bdf8; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #e2e8f0; line-height: 1.45;">
+              <span style="color: #3b82f6; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
               <span>Full copywriting crafted & polished (Zero guesswork)</span>
             </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #f1f5f9; line-height: 1.45;">
-              <span style="color: #38bdf8; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #e2e8f0; line-height: 1.45;">
+              <span style="color: #3b82f6; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
               <span>Server-Side CAPI Tracking (EMQ Match Quality > 8.5)</span>
             </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #f1f5f9; line-height: 1.45;">
-              <span style="color: #38bdf8; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #e2e8f0; line-height: 1.45;">
+              <span style="color: #3b82f6; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
               <span>27 Launch Creatives + 10-15 Monthly Refresh variations</span>
             </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #f1f5f9; line-height: 1.45;">
-              <span style="color: #38bdf8; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #e2e8f0; line-height: 1.45;">
+              <span style="color: #3b82f6; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
               <span>Daily Meta Ad Management & Continuous Monthly CRO</span>
             </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #f1f5f9; line-height: 1.45;">
-              <span style="color: #38bdf8; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #e2e8f0; line-height: 1.45;">
+              <span style="color: #3b82f6; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
               <span>1:1 Direct Slack / Asynchronous sync with Senior Media Buyer</span>
             </li>
-            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #f1f5f9; line-height: 1.45;">
-              <span style="color: #38bdf8; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
+            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #e2e8f0; line-height: 1.45;">
+              <span style="color: #3b82f6; font-weight: bold; font-size: 16px; line-height: 1;">✓</span>
               <span>Strict cohort capacity limit (Max 4 active clients/month)</span>
             </li>
           </ul>
         </div>
 
-        <!-- Right Column: Webcake Native Form Slot (Exactly 456px wide, 520px high) -->
+        <!-- Right Column: Webcake Native Form Slot (456px wide, 520px high) -->
         <div class="form-card-placeholder" data-webcake-slot="form" style="min-height: 520px; width: 456px; box-sizing: border-box;">
         </div>
 
