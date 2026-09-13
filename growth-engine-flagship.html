@@ -1692,70 +1692,7 @@
     </div>
   </section>
 
-  <!-- Section 11: Application & Intake Form (#form) -->
-  <section class="section" id="form">
-    <div class="form-wrapper">
-      <div class="form-title">
-        <span class="section-eyebrow" style="margin-bottom: 0.6rem;">100% FREE • NO OBLIGATION • NO ZOOM CALLS</span>
-        <h3>Request Your Free 1:1 Consultation</h3>
-        <p>Leave your business details below. Vũ Ngọc Hoàng will personally review your offer and message you directly via WhatsApp or Email within 24 hours with custom recommendations—100% free with no obligation.</p>
-      </div>
-
-      <form id="intake-form">
-        <!-- Honeypot Field -->
-        <div class="hp-field">
-          <label for="website_hp">Leave this empty</label>
-          <input type="text" id="website_hp" name="website_hp" autocomplete="off" tabindex="-1">
-        </div>
-
-        <div class="form-group">
-          <label for="full_name">Your Full Name *</label>
-          <input type="text" id="full_name" name="full_name" required placeholder="e.g. Alex Miller">
-        </div>
-
-        <div class="form-group">
-          <label for="email">Work Email Address *</label>
-          <input type="email" id="email" name="email" required placeholder="alex@yourbusiness.com">
-        </div>
-
-        <div class="form-group">
-          <label for="phone">WhatsApp or Telegram Number *</label>
-          <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000">
-        </div>
-
-        <div class="form-group">
-          <label for="offer_url">Website, Social Profile, or Offer Link *</label>
-          <input type="url" id="offer_url" name="offer_url" required placeholder="https://yourwebsite.com or LinkedIn profile">
-        </div>
-
-        <div class="form-group">
-          <label for="monthly_budget">Planned Monthly Meta Ad Budget *</label>
-          <select id="monthly_budget" name="monthly_budget" required>
-            <option value="" disabled selected>Select your planned monthly test ad spend</option>
-            <option value="$900 - $1,500/mo ($30-$50/day)">$900 - $1,500 / month ($30 - $50 / day) - Recommended</option>
-            <option value="$1,500 - $3,000/mo">$1,500 - $3,000 / month</option>
-            <option value="$3,000 - $5,000/mo">$3,000 - $5,000 / month</option>
-            <option value="$5,000+/mo">$5,000+ / month (Scaling)</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="bottleneck">What is your biggest acquisition bottleneck today? *</label>
-          <textarea id="bottleneck" name="bottleneck" rows="3" required placeholder="e.g. Need high-converting 2-step funnels, haven't set up CAPI, or need an experienced buyer to manage ads so I can focus on delivery..."></textarea>
-        </div>
-
-        <button type="submit" class="form-submit" id="submit-btn">
-          <span>Get Free Consultation &rarr;</span>
-          <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-
-        <div class="form-trust-note">
-          <svg class="lock-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          <span>100% Free Consultation • No credit card required • No Zoom calls • Hoàng messages you directly via WhatsApp or Email within 24 hours</span>
-        </div>
-      </form>
-    </div>
-  </section>
+  
 
   <!-- Sticky Bottom CTA Bar -->
   <div class="sticky-cta">
@@ -1802,61 +1739,7 @@
       });
     });
 
-    // Form Submission & CAPI Payload Setup
-    const form = document.getElementById('intake-form');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Honeypot check
-        const hp = document.getElementById('website_hp').value;
-        if (hp) {
-          console.warn('Bot detected.');
-          return;
-        }
-
-        const btn = document.getElementById('submit-btn');
-        btn.disabled = true;
-        btn.innerHTML = 'Sending Your Details...';
-
-        // Generate unique event_id for deduplication
-        const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
-
-        // Fire browser pixel event if available
-        if (typeof fbq === 'function') {
-          fbq('track', 'Lead', {
-            content_name: 'DFY Growth Retainer Intake',
-            value: 700.00,
-            currency: 'USD'
-          }, { eventID: eventId });
-        }
-
-        // Prepare CAPI payload for backend webhook
-        const payload = {
-          event: 'lead',
-          event_id: eventId,
-          event_time: Math.floor(Date.now() / 1000),
-          full_name: document.getElementById('full_name').value,
-          email: document.getElementById('email').value,
-          phone: document.getElementById('phone').value,
-          offer_url: document.getElementById('offer_url').value,
-          monthly_budget: document.getElementById('monthly_budget').value,
-          bottleneck: document.getElementById('bottleneck').value,
-          page_url: window.location.href,
-          user_agent: navigator.userAgent
-        };
-
-        console.log('Payload ready for webhook dispatch:', payload);
-
-        setTimeout(() => {
-          btn.innerHTML = 'Application Received! Redirecting...';
-          alert('Cảm ơn bạn! Thông tin đã được gửi tới Vũ Ngọc Hoàng.\n\nHoàng sẽ trực tiếp xem xét sản phẩm của bạn và nhắn tin lại qua WhatsApp/Email trong vòng 24 giờ để tư vấn miễn phí mà không cần gọi điện thoại hay họp Zoom.');
-          btn.disabled = false;
-          btn.innerHTML = 'Get Free Consultation &rarr;';
-          form.reset();
-        }, 800);
-      });
-    }
+    
   </script>
 
 <script>
@@ -1900,6 +1783,11 @@
         var absTop = window.pageYOffset + rect.top;
         if (window.parent && window.parent !== window) {
           window.parent.postMessage({ type: 'anchor-click', offset: absTop, source: iframeId }, '*');
+        }
+      } else if (targetId === 'form' || targetId === 'apply') {
+        e.preventDefault();
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'scroll-to-bottom', source: iframeId }, '*');
         }
       }
     }
