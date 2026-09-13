@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Done-For-You Growth Engine — Funnel Architecture, Copywriting & Meta Ads ($699/Month)</title>
+  <meta name="description" content="Deploy custom conversion funnels, full direct-response copywriting, zero-leak server CAPI, and active Meta ad management for $699/month flat. Directly architected by Senior Performance Media Buyer Vũ Ngọc Hoàng.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    // fbq('init', 'YOUR_PIXEL_ID');
+    // fbq('track', 'PageView');
+  </script>
+
+  <style>
+    /* ===== CSS Variables - Long-form Sales Page ===== */
+    :root {
+      --primary: #ea580c;          /* Action Orange */
+      --primary-hover: #c2410c;
+      --accent: #15803d;           /* Trust Green */
+      --accent-soft: #e7f6ec;
+      --ink: #1c1c28;
+      --bg-canvas: #ffffff;
+      --bg-warm: #fff7ed;          /* Warm section */
+      --bg-neutral: #f6f6f5;       /* Neutral section */
+      --text-primary: #1c1c28;
+      --text-secondary: #4b4b57;
+      --text-muted: #8a8a96;
+      --border: rgba(0, 0, 0, 0.08);
+      --border-card: rgba(0, 0, 0, 0.06);
+      --danger: #ef4444;
+      --danger-light: #fef2f2;
+      --star: #f59e0b;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --shadow-elevated: 0 16px 40px rgba(234, 88, 12, 0.12);
+      --transition: 0.22s ease;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+      background: var(--bg-canvas);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.68;
+      font-size: 16px;
+      padding-bottom: 74px; /* Space for sticky bottom bar */
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* Layout - Section Alternating Rhythm */
+    .section { padding: 5rem 1.25rem; }
+    .section.warm { background: var(--bg-warm); }
+    .section.neutral { background: var(--bg-neutral); }
+    .container { max-width: 780px; margin: 0 auto; }
+    .container-wide { max-width: 1100px; margin: 0 auto; }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1.1rem;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+      margin-bottom: 1.1rem;
+      color: var(--ink);
+    }
+    .section-lead {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2.2rem;
+    }
+    .text-center { text-align: center; }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 1.05rem 2.2rem;
+      border-radius: var(--radius-pill);
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      line-height: 1.2;
+      box-shadow: 0 8px 22px rgba(234, 88, 12, 0.28);
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(234, 88, 12, 0.35);
+    }
+    .btn-primary.btn-lg {
+      padding: 1.25rem 2.6rem;
+      font-size: 1.15rem;
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: #fff;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius-pill);
+      padding: 0.9rem 1.9rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background var(--transition), color var(--transition);
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Top Bar */
+    .top-announcement {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .top-announcement strong { color: #38bdf8; }
+    .badge-pill {
+      background: #0284c7;
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(8px);
+      padding: 0.85rem 0;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      transition: box-shadow var(--transition);
+    }
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .logo-badge {
+      background: var(--bg-warm);
+      color: var(--primary);
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+    }
+    .nav-menu { display: flex; align-items: center; gap: 0.5rem; }
+    .nav-link {
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radius-pill);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.93rem;
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+    .nav-link:hover { color: var(--primary); }
+
+    /* Hero */
+    .hero {
+      padding: 5.5rem 1.25rem 4.5rem;
+      background: var(--bg-warm);
+      text-align: center;
+    }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #fff;
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 0.5rem 1.2rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1.6rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 5.5vw, 3.35rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.18;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 .hl { color: var(--primary); }
+    .hero-desc {
+      font-size: 1.18rem;
+      color: var(--text-secondary);
+      line-height: 1.72;
+      margin-bottom: 1.8rem;
+    }
+    .audience-callout {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.7);
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 2.2rem;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.8rem;
+    }
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .trust-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* Card System */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .pain-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+    }
+    .pain-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--danger);
+      background: var(--danger-light);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    .pain-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--ink);
+    }
+    .pain-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .pain-result {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--danger);
+    }
+
+    /* 4 Pillars Grid */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.2rem;
+    }
+    .pillar-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+    }
+    .pillar-icon-wrap {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-warm);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .pillar-icon-wrap svg { width: 26px; height: 26px; }
+    .pillar-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+      color: var(--ink);
+    }
+    .pillar-card p {
+      font-size: 0.97rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .pillar-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .pillar-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .pillar-list li svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+
+    /* Scorecard Table */
+    .table-wrapper {
+      overflow-x: auto;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      margin-top: 2rem;
+    }
+    .scorecard-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    .scorecard-table th, .scorecard-table td {
+      padding: 1.1rem 1.2rem;
+      vertical-align: middle;
+    }
+    .scorecard-table thead th {
+      background: #f8fafc;
+      font-weight: 700;
+      color: var(--text-primary);
+      border-bottom: 2px solid #e2e8f0;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .scorecard-table tbody tr {
+      border-bottom: 1px solid #f1f5f9;
+      transition: background 0.15s ease;
+    }
+    .scorecard-table tbody tr:hover { background: #fafafa; }
+    .scorecard-table tbody tr:last-child { border-bottom: none; }
+    .scorecard-table .highlight-col {
+      background: rgba(234, 88, 12, 0.03);
+      font-weight: 600;
+    }
+    .scorecard-table thead th.highlight-col {
+      background: var(--bg-warm);
+      color: var(--primary);
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .status-badge.win { color: var(--accent); }
+    .status-badge.lose { color: var(--danger); }
+    .status-badge svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    /* Cash Outflow Comparison */
+    .cash-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.8rem;
+      margin-top: 2rem;
+    }
+    .cash-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-card);
+    }
+    .cash-card.featured {
+      box-shadow: 0 12px 36px rgba(234, 88, 12, 0.1);
+      position: relative;
+    }
+    .cash-card-header { margin-bottom: 1.5rem; }
+    .cash-card-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .cash-card-subtitle { font-size: 0.92rem; color: var(--text-secondary); }
+    .cash-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.95rem;
+    }
+    .cash-row-label { color: var(--text-secondary); }
+    .cash-row-val { font-weight: 700; }
+    .cash-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 800;
+      border-top: 2px solid #e2e8f0;
+    }
+    .efficiency-bar-wrapper { margin-top: 1.5rem; }
+    .efficiency-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .efficiency-bar {
+      height: 10px;
+      border-radius: var(--radius-pill);
+      background: #e2e8f0;
+      overflow: hidden;
+    }
+    .efficiency-fill {
+      height: 100%;
+      border-radius: var(--radius-pill);
+    }
+    .fill-low { width: 16%; background: var(--danger); }
+    .fill-high { width: 88%; background: var(--accent); }
+
+    /* SOW 6 Deliverables */
+    .sow-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.6rem;
+      margin-top: 2.2rem;
+    }
+    .sow-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+    }
+    .sow-num {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+    .sow-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
+    .sow-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+    .check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.94rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+    .check-tick {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .check-tick svg { width: 12px; height: 12px; }
+
+    /* Timeline Roadmap */
+    .timeline-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+      margin-top: 2.2rem;
+    }
+    .timeline-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
+      box-shadow: var(--shadow-card);
+    }
+    .timeline-day {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--primary);
+      background: var(--bg-warm);
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 0.85rem;
+    }
+    .timeline-card h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Senior Practitioner Box */
+    .practitioner-box {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2.8rem;
+      box-shadow: var(--shadow-card);
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2.4rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .practitioner-avatar-wrap { text-align: center; }
+    .practitioner-img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      margin-bottom: 1rem;
+    }
+    .practitioner-meta h4 { font-size: 1.15rem; font-weight: 800; margin-bottom: 0.2rem; }
+    .practitioner-meta p { font-size: 0.88rem; color: var(--text-muted); }
+    .practitioner-body h3 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .practitioner-body p {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .stat-pill-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .stat-pill {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-sm);
+      padding: 0.6rem 1rem;
+    }
+    .stat-pill-num { font-size: 1.2rem; font-weight: 800; color: var(--primary); }
+    .stat-pill-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+
+    /* Offer Card */
+    .offer-card {
+      background: #fff;
+      border: 2.5px solid var(--primary);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.2rem;
+      box-shadow: var(--shadow-elevated);
+      max-width: 720px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+    }
+    .offer-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.1rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 1.4rem;
+    }
+    .offer-title {
+      font-size: clamp(1.8rem, 4vw, 2.3rem);
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .offer-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.8rem;
+    }
+    .offer-pricing-box {
+      background: var(--bg-warm);
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
+      margin-bottom: 2rem;
+    }
+    .offer-price-old {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+      margin-bottom: 0.3rem;
+    }
+    .offer-price-new {
+      font-size: clamp(2.6rem, 6vw, 3.6rem);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .offer-price-terms {
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .offer-card .check-list {
+      text-align: left;
+      margin: 2rem 0 2.5rem;
+      padding: 0 1rem;
+    }
+    .scarcity-alert {
+      background: #fef2f2;
+      color: #991b1b;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 1.8rem;
+    }
+
+    /* Guarantee Block */
+    .guarantee-block {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2.8rem 2.2rem;
+      box-shadow: var(--shadow-card);
+      text-align: center;
+      max-width: 720px;
+      margin: 2rem auto 0;
+    }
+    .guarantee-seal {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.4rem;
+    }
+    .guarantee-seal svg { width: 44px; height: 44px; }
+    .guarantee-block h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 0.8rem;
+    }
+    .guarantee-block p {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Accordion FAQ */
+    .faq-container {
+      max-width: 780px;
+      margin: 2.2rem auto 0;
+    }
+    .accordion {
+      background: #fff;
+      border-radius: var(--radius-md);
+      margin-bottom: 0.9rem;
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+    }
+    .accordion-head {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: none;
+      border: none;
+      padding: 1.3rem 1.4rem;
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      text-align: left;
+    }
+    .accordion-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--text-muted);
+      transition: transform var(--transition);
+    }
+    .accordion.open .accordion-chevron { transform: rotate(180deg); }
+    .accordion-body {
+      display: none;
+      padding: 0 1.4rem 1.4rem;
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+    .accordion.open .accordion-body { display: block; }
+
+    /* Form Section */
+    .form-wrapper {
+      max-width: 620px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-elevated);
+      padding: 2.6rem 2.2rem;
+    }
+    .form-title { text-align: center; margin-bottom: 2rem; }
+    .form-title h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--ink); }
+    .form-title p { color: var(--text-secondary); font-size: 1rem; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+      font-size: 0.93rem;
+      color: var(--text-primary);
+    }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #fff;
+      color: var(--text-primary);
+      border: 1.5px solid rgba(0, 0, 0, 0.12);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color var(--transition);
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .form-group textarea { min-height: 90px; resize: vertical; }
+    .hp-field { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
+    .form-submit {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 1.15rem 1.6rem;
+      border-radius: var(--radius-pill);
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(234, 88, 12, 0.28);
+      transition: background var(--transition), transform var(--transition);
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+    .form-trust-note {
+      text-align: center;
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+    .form-trust-note svg { width: 15px; height: 15px; color: var(--accent); }
+
+    /* Sticky Bottom Bar */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+      padding: 0.75rem 1.25rem;
+      padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+    }
+    .sticky-cta-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .sticky-cta-text h5 { font-size: 0.98rem; font-weight: 800; color: var(--ink); }
+    .sticky-cta-text p { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* Footer */
+    footer {
+      background: #090d16;
+      color: #94a3b8;
+      padding: 3.5rem 1.25rem 2.5rem;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-links { display: flex; gap: 1.2rem; }
+    .footer-links a { color: #94a3b8; text-decoration: none; transition: color var(--transition); }
+    .footer-links a:hover { color: #fff; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .pain-grid { grid-template-columns: repeat(2, 1fr); }
+      .timeline-wrapper { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .nav-menu { display: none; }
+      .pain-grid, .pillar-grid, .cash-grid, .sow-grid, .timeline-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .practitioner-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+      .practitioner-avatar-wrap { margin: 0 auto; }
+      .stat-pill-row { justify-content: center; }
+      .section { padding: 3.8rem 1.25rem; }
+      .sticky-cta-text { display: none; }
+      .sticky-cta .btn-primary { width: 100%; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 4rem 1rem 3.5rem; }
+      .form-wrapper { padding: 1.8rem 1.2rem; }
+      .form-group input, .form-group select, .form-group textarea { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span class="badge-pill">LIMITED COHORT</span>
+    <span>Only <strong>4 Retainer Slots</strong> Available This Month — $699/Month Flat Retainer | Month-to-Month, No Long-Term Contract</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span>The Scale Engine</span>
+        <span class="logo-badge">Done-For-You Growth</span>
+      </a>
+      <nav class="nav-menu">
+        <a href="#dilemma" class="nav-link">The Dilemma</a>
+        <a href="#solution" class="nav-link">The Retainer Scope</a>
+        <a href="#matrix" class="nav-link">9-Point Scorecard</a>
+        <a href="#sow" class="nav-link">Deliverables</a>
+        <a href="#pricing" class="nav-link">Monthly Investment</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+      <a href="#form" class="btn-primary" style="padding: 0.65rem 1.3rem; font-size: 0.92rem;">
+        Get Free Consultation <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <svg class="icon-rocket" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+        <span>SENIOR PRACTITIONER GROWTH PARTNER — $699/MONTH FLAT RETAINER</span>
+      </div>
+      <h1>
+        Before You Pay An Agency A <span class="hl">$4,000/Month Retainer</span> For An Intern...
+        <br>Get Funnel Architecture, Full Copywriting & Senior Meta Ad Management For <span class="hl">$699/Month</span>.
+      </h1>
+      <p class="hero-desc">
+        Directly architected by Senior Performance Media Buyer Vũ Ngọc Hoàng (> $400k+ Meta spend). We build your custom conversion funnels, craft all direct-response copy, install zero-leak server CAPI, and actively manage your Meta campaigns daily with monthly creative refreshes — month-to-month with no long-term lock-in contracts.
+      </p>
+      <div class="audience-callout">
+        Exclusively for Skilled Solopreneurs, Consultants, Coaches, Course Creators & First-Time Business Founders.
+      </div>
+      <div class="hero-actions">
+        <a href="#form" class="btn-primary btn-lg">
+          Get Free Consultation <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#sow" class="btn-outline">
+          View Scope of Work & Deliverables
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><svg class="shield-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> <span>Custom Funnels + A/B Testing</span></div>
+        <div class="trust-item"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> <span>Full Copywriting Included</span></div>
+        <div class="trust-item"><svg class="icon-chart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg> <span>Active Daily Meta Ad Management</span></div>
+        <div class="trust-item"><svg class="icon-coin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M14.5 9.5a3 3 0 0 0-5 0M14.5 14.5a3 3 0 0 1-5 0M12 7v2M12 15v2"/></svg> <span>Month-to-Month (No Lock-In)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: The 0-to-1 Launch Dilemma (#dilemma) -->
+  <section class="section" id="dilemma">
+    <div class="container text-center">
+      <span class="section-eyebrow">THE 0-TO-1 LAUNCH DILEMMA</span>
+      <h2 class="section-title">Why Traditional Marketing Solutions Burn Your Startup Capital</h2>
+      <p class="section-lead">
+        When an early-stage founder or consultant tries to launch paid acquisition, they inevitably collide with three broken alternatives that bleed money without delivering predictable leads.
+      </p>
+    </div>
+    <div class="container-wide">
+      <div class="pain-grid">
+        <!-- Card 1 -->
+        <div class="pain-card">
+          <span class="pain-badge">PATH 1: DIY</span>
+          <h3>The DIY Tech Hamster Wheel</h3>
+          <p>
+            You spend 3 to 6 months wrestling with Webflow, Zapier, domain DNS records, and Meta Events Manager. You burn your nights trying to fix broken button states and misaligned mobile layouts instead of serving clients.
+          </p>
+          <div class="pain-result">
+            Result: Exhaustion, zero paying clients, and months of lost momentum while competitors take your market.
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="pain-card">
+          <span class="pain-badge">PATH 2: FREELANCERS</span>
+          <h3>The Fragmented Upwork Trap</h3>
+          <p>
+            You hire a designer for $500, a copywriter for $300, and an ad buyer. None of them communicate. When the ads launch and cost-per-lead spikes, they all point fingers at each other: copy blames design, media buyer blames the funnel.
+          </p>
+          <div class="pain-result">
+            Result: Three separate invoices paid, zero single-source accountability, and burned capital.
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="pain-card">
+          <span class="pain-badge">PATH 3: AGENCIES</span>
+          <h3>The Predatory $4,000/Mo Retainer</h3>
+          <p>
+            Traditional agencies demand $4,000 to $5,000/month upfront with a mandatory 3-month contract ($12,000 committed). Then they pass your account off to an unpaid college intern managing 15 other clients while charging extra for funnels.
+          </p>
+          <div class="pain-result">
+            Result: You pay triple your actual ad spend in overhead fees before generating your first validated sale.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: The Solution (#solution) -->
+  <section class="section warm" id="solution">
+    <div class="container text-center">
+      <span class="section-eyebrow">THE ALL-IN-ONE GROWTH PARTNERSHIP</span>
+      <h2 class="section-title">Introducing The Done-For-You Growth Engine</h2>
+      <p class="section-lead">
+        We engineered an integrated direct-response customer acquisition service specifically for solopreneurs and founders. You get your custom 1-Hero conversion funnel, 2 hook split-test variations, complete sales copywriting, server-side CAPI tracking, and ongoing Meta ad management with monthly creative refreshes — all for an accessible <strong>$699/month flat retainer</strong>.
+      </p>
+    </div>
+    <div class="container-wide">
+      <div class="pillar-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap"><svg class="icon-layers" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+          <h3>1. The 1-Hero Conversion Funnel</h3>
+          <p>We deploy your custom-coded 1-Hero conversion funnel (Opt-in / VSL / Sales Page &rarr; Application / Thank You / Checkout) engineered for sub-1.5s mobile speed, plus 2 hook split-tests.</p>
+          <ul class="pillar-list">
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Custom 1-Hero direct-response funnel architecture</li>
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 2 opening hook & headline A/B split-test variations</li>
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Sub-1.5s lightning load speed on mobile devices</li>
+          </ul>
+        </div>
+        <!-- Pillar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <h3>2. Full Direct-Response Copywriting</h3>
+          <p>You never have to stare at a blank page. We write all the copy for each funnel step, including hook matrices, mechanism narratives, objection FAQs, and confirmation flows.</p>
+          <ul class="pillar-list">
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Custom high-converting copy for all funnel steps</li>
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 5 battle-tested opening hooks for split-testing</li>
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Deep mechanism positioning that overcomes skepticism</li>
+          </ul>
+        </div>
+        <!-- Pillar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap"><svg class="icon-target" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <h3>3. Zero-Leak Server CAPI Architecture</h3>
+          <p>Server-to-server Meta Conversions API (CAPI) installed on your custom domain, ensuring full data capture and high Event Match Quality despite iOS privacy blockers.</p>
+          <ul class="pillar-list">
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 100% server-side event deduplication across funnels</li>
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Event Match Quality Score guaranteed > 8.5/10</li>
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Zero reliance on fragile browser cookies</li>
+          </ul>
+        </div>
+        <!-- Pillar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap"><svg class="icon-chart" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+          <h3>4. Active Daily Meta Ad Management</h3>
+          <p>Ongoing media buying, algorithmic cost caps, monthly creative refresh packs (10-15 ads/mo), and continuous CRO handled directly by Vũ Ngọc Hoàng (> $400k+ Meta spend).</p>
+          <ul class="pillar-list">
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Broad-targeting CBO campaign architecture & daily bid caps</li>
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 27 launch ad creatives + monthly 10-15 creative refreshes</li>
+            <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Flat $699/mo — $0 %-cut on ad spend, cancel anytime</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Strategic Callout: Why Funnel Architecture -->
+      <div style="background: #ffffff; border: 1px solid rgba(234, 88, 12, 0.2); border-radius: var(--radius-md); padding: 2rem; margin-top: 2.5rem; box-shadow: var(--shadow-card);">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+          <span style="background: #fff7ed; color: var(--primary); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.35rem 0.85rem; border-radius: 999px;">STRATEGIC ARCHITECTURE</span>
+          <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--ink); margin: 0;">Why Dedicated Funnel Architecture Dominates For First-Time Founders</h4>
+        </div>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.98rem; line-height: 1.6;">
+          Many amateur agencies pitch "building 3 to 5 pages" to inflate their perceived value. But for an expert or first-time founder testing paid traffic with a $1,000–$1,500/month ad budget ($30–$50/day), dividing that spend across 3 pages means each page gets only $10/day—<strong>starving Meta's machine learning of conversion data and guaranteeing failure</strong>.
+        </p>
+        <p style="color: var(--text-secondary); margin: 0; font-size: 0.98rem; line-height: 1.6;">
+          By concentrating 100% of your testing capital into <strong>one master Hero Funnel</strong> (with 2 headline/hook split-test variations), we generate maximum data density, rapidly reach the 50-conversion/week optimization threshold, and find your winning cost-per-acquisition without burning your capital.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: The 9-Point Decision Matrix (#matrix) -->
+  <section class="section neutral" id="matrix">
+    <div class="container text-center">
+      <span class="section-eyebrow">THE 9-POINT EVALUATION SCORECARD</span>
+      <h2 class="section-title">Compare Your Options Side-by-Side</h2>
+      <p class="section-lead">
+        Check this evaluation scorecard before you sign any contract, hire any freelancer, or commit your savings to an agency retainer.
+      </p>
+    </div>
+    <div class="container-wide">
+      <div class="table-wrapper">
+        <table class="scorecard-table">
+          <thead>
+            <tr>
+              <th>Evaluation Dimension</th>
+              <th>1. DIY (Do-It-Yourself)</th>
+              <th>2. Upwork Freelancers</th>
+              <th>3. Traditional Agency</th>
+              <th class="highlight-col">4. The Scale Engine</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Monthly Retainer</strong></td>
+              <td>$0 cash (Massive time cost)</td>
+              <td>$400 - $800 / mo (Fragmented)</td>
+              <td>$4,000 - $5,000 / month</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> $699 / Month Flat</span></td>
+            </tr>
+            <tr>
+              <td><strong>Contract Commitment</strong></td>
+              <td>N/A</td>
+              <td>Hourly / per-task creep</td>
+              <td>Mandatory 3 to 6-mo lock-in ($12k+)</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Month-to-Month (No Lock-In)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Funnel Production</strong></td>
+              <td>Amateur guesswork</td>
+              <td>1 basic page ($500+ extra)</td>
+              <td>$2,000+ extra setup fee or 1 page</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 1 Master Hero Funnel + 2 Split-Tests</span></td>
+            </tr>
+            <tr>
+              <td><strong>Direct-Response Copy</strong></td>
+              <td>Trial & error / writer's block</td>
+              <td>Generic, disconnected copy</td>
+              <td>Outsourced to junior intern</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Full Copywriting Included</span></td>
+            </tr>
+            <tr>
+              <td><strong>Technical Tracking (CAPI)</strong></td>
+              <td>Fragile browser-only pixel</td>
+              <td>Frequently misconfigured</td>
+              <td>Basic browser pixel setup</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Server CAPI > 8.5/10 EMQ</span></td>
+            </tr>
+            <tr>
+              <td><strong>Meta Ad Management</strong></td>
+              <td>Blind boosting & guesswork</td>
+              <td>Disjointed freelance buyer</td>
+              <td>College intern with 15 accounts</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Daily Senior Buyer (> $400k)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Ad Spend Surcharges</strong></td>
+              <td>None</td>
+              <td>Hourly billing overhead</td>
+              <td>10% - 15% fee on ad spend</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> $0 Extra Cuts (Flat $699/mo)</span></td>
+            </tr>
+            <tr>
+              <td><strong>First Launch Speed</strong></td>
+              <td>3 - 6 months of delay</td>
+              <td>4 - 8 weeks of delays</td>
+              <td>30 - 45 days onboarding</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Sprint Launch in 14 Days</span></td>
+            </tr>
+            <tr>
+              <td><strong>Accountability</strong></td>
+              <td>100% on your shoulders</td>
+              <td>3 freelancers pointing fingers</td>
+              <td>Blames your offer / page</td>
+              <td class="highlight-col"><span class="status-badge win"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Unified Single-Source Partner</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: 60-Day Cash Outflow Breakdown -->
+  <section class="section">
+    <div class="container text-center">
+      <span class="section-eyebrow">CAPITAL EFFICIENCY AUDIT</span>
+      <h2 class="section-title">Where Does Your Capital Actually Go?</h2>
+      <p class="section-lead">
+        Here is the cold, hard math of a founder starting with a $6,000 total marketing budget over their first 60 days.
+      </p>
+    </div>
+    <div class="container-wide">
+      <div class="cash-grid">
+        <!-- Agency Scenario -->
+        <div class="cash-card">
+          <div class="cash-card-header">
+            <h3 class="cash-card-title">Traditional Agency Route</h3>
+            <p class="cash-card-subtitle">$6,000 starting budget over 60 days</p>
+          </div>
+          <div class="cash-row">
+            <span class="cash-row-label">Agency Retainer (Month 1)</span>
+            <span class="cash-row-val">$4,000.00</span>
+          </div>
+          <div class="cash-row">
+            <span class="cash-row-label">Agency Retainer (Month 2)</span>
+            <span class="cash-row-val">$4,000.00</span>
+          </div>
+          <div class="cash-row">
+            <span class="cash-row-label">Funnel & Copy Extra Setup</span>
+            <span class="cash-row-val">$1,500.00</span>
+          </div>
+          <div class="cash-row">
+            <span class="cash-row-label">Remaining Capital For Real Ads</span>
+            <span class="cash-row-val" style="color: var(--danger);">-$3,500.00 (Deficit)</span>
+          </div>
+          <div class="cash-total">
+            <span>Total Capital Expended</span>
+            <span>$9,500.00+</span>
+          </div>
+          <div class="efficiency-bar-wrapper">
+            <div class="efficiency-label">
+              <span>Actual Capital Used To Acquire Customers</span>
+              <span style="color: var(--danger);">< 15%</span>
+            </div>
+            <div class="efficiency-bar"><div class="efficiency-fill fill-low"></div></div>
+          </div>
+        </div>
+        <!-- Scale Engine Scenario -->
+        <div class="cash-card featured">
+          <div class="cash-card-header">
+            <h3 class="cash-card-title" style="color: var(--primary);">The Scale Engine Retainer</h3>
+            <p class="cash-card-subtitle">$6,000 starting budget over 60 days</p>
+          </div>
+          <div class="cash-row">
+            <span class="cash-row-label">Month 1 Retainer (Funnel Architecture + Copy + Ads)</span>
+            <span class="cash-row-val">$699.00</span>
+          </div>
+          <div class="cash-row">
+            <span class="cash-row-label">Month 2 Retainer (Daily Ad Management & CRO)</span>
+            <span class="cash-row-val">$699.00</span>
+          </div>
+          <div class="cash-row">
+            <span class="cash-row-label">Extra Funnel & Copywriting Fees</span>
+            <span class="cash-row-val" style="color: var(--accent);">$0.00 (Included)</span>
+          </div>
+          <div class="cash-row">
+            <span class="cash-row-label">Direct Meta Ad Budget (Customer Acquisition)</span>
+            <span class="cash-row-val" style="color: var(--accent);">$4,600.00</span>
+          </div>
+          <div class="cash-total">
+            <span>Total Capital Expended</span>
+            <span style="color: var(--primary);">$6,000.00</span>
+          </div>
+          <div class="efficiency-bar-wrapper">
+            <div class="efficiency-label">
+              <span>Actual Capital Used To Acquire Customers</span>
+              <span style="color: var(--accent);">76.7% Working Ad Capital</span>
+            </div>
+            <div class="efficiency-bar"><div class="efficiency-fill fill-high"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The Scope of Work (#sow) -->
+  <section class="section warm" id="sow">
+    <div class="container text-center">
+      <span class="section-eyebrow">COMPLETE RETAINER SPECIFICATIONS</span>
+      <h2 class="section-title">Everything Handled Inside Your $699/Month Retainer</h2>
+      <p class="section-lead">
+        When you partner with us, you receive a full growth division covering funnel architecture, sales copywriting, server tracking, and continuous daily ad management.
+      </p>
+    </div>
+    <div class="container-wide">
+      <div class="sow-grid">
+        <!-- Deliverable 1 -->
+        <div class="sow-card">
+          <span class="sow-num">DELIVERABLE 01</span>
+          <h3>The 1-Hero Conversion Funnel Architecture</h3>
+          <p>We design, build, and deploy your custom high-converting 1-Hero conversion funnel (Opt-in / VSL / Sales Page &rarr; Application / Thank You / Checkout), plus 2 hook split-tests.</p>
+          <ul class="check-list">
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> 1 Master direct-response conversion funnel deployed</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> 2 A/B split-test variations to discover your highest-converting hook</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Integrated intake forms, Stripe checkout, or booking calendar</li>
+          </ul>
+        </div>
+        <!-- Deliverable 2 -->
+        <div class="sow-card">
+          <span class="sow-num">DELIVERABLE 02</span>
+          <h3>Full Direct-Response Copywriting</h3>
+          <p>Every word of copy across your Hero Funnel and split-tests is researched, crafted, and polished by a direct-response specialist. Zero copy guesswork on your end.</p>
+          <ul class="check-list">
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Complete sales copy, headlines & persuasive body narrative</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> 5 distinct opening hooks for systematic A/B testing</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Comprehensive objection-handling FAQs and confirmation copy</li>
+          </ul>
+        </div>
+        <!-- Deliverable 3 -->
+        <div class="sow-card">
+          <span class="sow-num">DELIVERABLE 03</span>
+          <h3>Zero-Leak Server-Side CAPI Tracking</h3>
+          <p>Server-to-server Meta Conversions API implementation on your custom domain that bypasses browser ad-blockers and iOS privacy restrictions.</p>
+          <ul class="check-list">
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Full event deduplication (PageView, ViewContent, Lead, Purchase)</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Event Match Quality Score guaranteed > 8.5/10</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Custom conversion parameters and webhook dispatch</li>
+          </ul>
+        </div>
+        <!-- Deliverable 4 -->
+        <div class="sow-card">
+          <span class="sow-num">DELIVERABLE 04</span>
+          <h3>27 Launch Creatives + Monthly Refresh Packs</h3>
+          <p>A full launch pack of 27 ad creative variations in Month 1, followed by 10-15 fresh creative variations every month to eliminate ad fatigue.</p>
+          <ul class="check-list">
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Month 1: 27 launch variations (Contrast, Mechanism, and Proof)</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Month 2+: 10 - 15 fresh creative variations monthly</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> High-CTR scroll-stopping headline overlays</li>
+          </ul>
+        </div>
+        <!-- Deliverable 5 -->
+        <div class="sow-card">
+          <span class="sow-num">DELIVERABLE 05</span>
+          <h3>Active Daily Meta Ad Management & Ongoing CRO</h3>
+          <p>Continuous campaign optimization, daily bid governance, and ongoing monthly conversion rate optimization on your Hero Funnel to reduce CPA.</p>
+          <ul class="check-list">
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Broad-targeting CBO campaign architecture & daily bid checks</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Algorithmic bid ceilings and cost caps to prevent overspending</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Ongoing monthly CRO: systematic A/B testing of funnel headlines & CTAs</li>
+          </ul>
+        </div>
+        <!-- Deliverable 6 -->
+        <div class="sow-card">
+          <span class="sow-num">DELIVERABLE 06</span>
+          <h3>Weekly Growth Reporting & 1:1 Direct Sync</h3>
+          <p>Direct communication and weekly performance reports so you are always clear on your metrics, CPA, and scale roadmap.</p>
+          <ul class="check-list">
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Weekly metrics dashboard & conversion rate audit</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> Direct asynchronous/Slack access to Senior Buyer Vũ Ngọc Hoàng</li>
+            <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> 100% intellectual property ownership of all funnels, code & copy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Delivery Roadmap & Lifecycle -->
+  <section class="section neutral">
+    <div class="container text-center">
+      <span class="section-eyebrow">THE SERVICE LIFECYCLE</span>
+      <h2 class="section-title">Sprint Launch In 14 Days, Continuous Scale Every Month</h2>
+      <p class="section-lead">
+        Here is how we launch your acquisition system in Month 1, followed by continuous daily media buying and optimization in ongoing months.
+      </p>
+    </div>
+    <div class="container-wide">
+      <div class="timeline-wrapper">
+        <div class="timeline-card">
+          <span class="timeline-day">DAYS 01 - 02</span>
+          <h4>Intake & Avatar Audit</h4>
+          <p>Asset collection, business manager access configuration, domain verification, and existing tracking audit.</p>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-day">DAYS 03 - 05</span>
+          <h4>Funnel Copywriting & Hooks</h4>
+          <p>Full sales copy crafted for your 1-Hero funnel and split-tests, including headline matrices, mechanism breakdown, and hooks.</p>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-day">DAYS 06 - 08</span>
+          <h4>2-Step Funnel Engineering</h4>
+          <p>Custom HTML/CSS development, sub-1.5s mobile speed optimization, and responsive design across iOS & Android.</p>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-day">DAYS 09 - 11</span>
+          <h4>Server CAPI & 27 Ad Creatives</h4>
+          <p>Server-to-server CAPI wiring, webhook payload validation, and 27 high-converting ad creative variations produced.</p>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-day">DAYS 12 - 13</span>
+          <h4>End-to-End System QA</h4>
+          <p>Full funnel purchase test, CAPI Event Match Quality validation (> 8.5/10 check), and bid cap configuration.</p>
+        </div>
+        <div class="timeline-card">
+          <span class="timeline-day">DAY 14 & ONGOING</span>
+          <h4>Live Launch & Daily Management</h4>
+          <p>Ads go live on Meta. From Day 15 onward, we monitor CPA daily, test new creative variations, and scale winning ads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Senior Practitioner Anchor -->
+  <section class="section">
+    <div class="container-wide">
+      <div class="practitioner-box">
+        <div class="practitioner-avatar-wrap">
+          <img src="https://statics.pancake.vn/web-media-263/3b/4e/e0/eb/4ff5d169d124d50f61cec6788fdd0312b9379b4e1ccd0c8111158c6f.jpg" alt="Vũ Ngọc Hoàng" class="practitioner-img">
+          <div class="practitioner-meta">
+            <h4>Vũ Ngọc Hoàng</h4>
+            <p>Senior Media Buyer & Conversion Architect</p>
+          </div>
+        </div>
+        <div class="practitioner-body">
+          <span class="section-eyebrow" style="margin-bottom: 0.8rem;">THE OPERATOR BEHIND YOUR ENGINE</span>
+          <h3>Direct Senior Execution. No Interns. No Passing The Buck.</h3>
+          <p>
+            "I spent years managing hundreds of thousands of dollars in Meta ad spend. I saw the ugly secret of traditional marketing agencies: they sign a founder for $4,000/month, and the very next day, they delegate the account to a junior coordinator who has never spent a dollar of their own money.
+          </p>
+          <p>
+            The Scale Engine exists to eliminate that bloated agency tax. When you join our monthly service, I personally write your direct-response copy, oversee your 1-Hero funnel build and split-tests, configure server CAPI tracking, and manage your Meta ad campaigns daily with monthly creative refreshes. You get institutional-grade direct-response execution for just <strong>$699/month flat</strong>, month-to-month."
+          </p>
+          
+          <!-- Founder Manifesto: The Complementary Puzzle Pieces -->
+          <div class="manifesto-box" style="margin-top: 2rem; padding: 1.75rem; background: #ffffff; border-radius: 14px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 20px rgba(0,0,0,0.03); text-align: left;">
+            <span class="section-eyebrow" style="margin-bottom: 0.6rem; color: var(--primary);">FOUNDER MANIFESTO</span>
+            <h4 style="font-size: 1.25rem; font-weight: 700; color: #1c1c28; margin-bottom: 0.75rem;">Why $699/Month? The Complementary Puzzle Pieces</h4>
+            <p style="font-style: italic; color: #4b4b57; margin-bottom: 1rem; border-left: 3px solid #ea580c; padding-left: 1rem; font-size: 1rem; line-height: 1.6;">
+              "The single biggest reason brilliant founders fail isn’t their product. It’s that they try to do everything alone."
+            </p>
+            <p style="margin-bottom: 0.85rem; color: #4b4b57; font-size: 0.95rem; line-height: 1.65;">
+              You spent years mastering your craft — whether that’s software architecture, high-impact coaching, consulting, or course creation. That is your superpower. That is where your 10,000 hours went. You should be 100% focused on refining your product and serving your clients, not wrestling with CSS margins, tracking scripts, or Ads Manager dials.
+            </p>
+            <p style="margin-bottom: 0.85rem; color: #4b4b57; font-size: 0.95rem; line-height: 1.65;">
+              My 10,000 hours went somewhere else: Over the past <strong>6 years</strong>, I’ve managed more than <strong>$400,000+ (10B+ VNĐ) in Meta performance ad spend across thousands of campaigns</strong>. I’ve lived through every algorithm update, broken pixel, dead funnel, and midnight DNS error.
+            </p>
+            <p style="margin-bottom: 0.85rem; color: #4b4b57; font-size: 0.95rem; line-height: 1.65;">
+              If you try to learn direct-response marketing from scratch while running your company, your launch moves at a crawl and your product suffers. <strong>We are complementary puzzle pieces.</strong> If you want to go fast, you go alone. If you want to go far and scale sustainably, we go together.
+            </p>
+            <p style="margin-bottom: 0; color: #4b4b57; font-size: 0.95rem; line-height: 1.65; background: #fff7ed; padding: 1rem; border-radius: 8px;">
+              <strong>Aligned Incentives:</strong> We keep our retainer at an accessible flat <strong>$699/month</strong> to protect your runway early on. When this engine stabilizes and your revenue scales past <strong>$5,000/month</strong>, you’ll naturally expand your campaigns — and that is how we grow together. We don't profit by taxing your startup capital; we profit by helping you win first.
+            </p>
+          </div>
+
+<div class="stat-pill-row">
+            <div class="stat-pill">
+              <div class="stat-pill-num">> $400,000+</div>
+              <div class="stat-pill-label">Meta Ad Spend Managed</div>
+            </div>
+            <div class="stat-pill">
+              <div class="stat-pill-num">> 8.5 / 10</div>
+              <div class="stat-pill-label">CAPI Event Match Quality</div>
+            </div>
+            <div class="stat-pill">
+              <div class="stat-pill-num">< 1.5s</div>
+              <div class="stat-pill-label">Mobile Load Speed SLA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: The Monthly Retainer Offer (#pricing) -->
+  <section class="section warm" id="pricing">
+    <div class="container text-center">
+      <span class="section-eyebrow">TRANSPARENT VALUE PRICING</span>
+      <h2 class="section-title">The Done-For-You Growth Retainer: Institutional Quality At Solopreneur Economics</h2>
+      <p class="section-lead">
+        A monthly service partnership designed so you never have to worry about funnels, copy, tracking, or ad management again.
+      </p>
+    </div>
+    <div class="container-wide">
+      <div class="offer-card">
+        <span class="offer-badge">LIMITED MONTHLY COHORT</span>
+        <h3 class="offer-title">The Done-For-You Growth Engine</h3>
+        <p class="offer-subtitle">Funnel Architecture, Full Copywriting & Active Daily Meta Ad Management</p>
+        
+        <div class="offer-pricing-box">
+          <div class="offer-price-old">Traditional Agency Retainer: $4,000 - $5,000 / month</div>
+          <div class="offer-price-new">$699 <span style="font-size: 1.4rem; font-weight: 600; color: var(--text-secondary);">USD / month</span></div>
+          <div class="offer-price-terms">Flat Monthly Retainer — Month-to-Month — Cancel Anytime</div>
+        </div>
+
+        <div class="scarcity-alert">
+          Strict Cohort Cap: We accept strictly 4 clients per month to preserve senior practitioner execution quality.
+        </div>
+
+        <ul class="check-list">
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>Custom 1-Hero Conversion Funnel</strong> (Engineered for sub-1.5s mobile speed + 2 hook split-tests)</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>Complete Direct-Response Copywriting Included</strong> (Headlines, body copy, hooks & FAQs)</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>Zero-Leak Server-Side CAPI Tracking</strong> (Event Match Quality guaranteed > 8.5/10)</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>27 Launch Ad Creatives + Monthly Refresh Packs</strong> (10-15 fresh creatives monthly)</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>Active Daily Meta Ad Management</strong> by Senior Buyer (> $400k+ Meta spend)</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>Algorithmic Bid Ceilings & Safety Valves</strong> to safeguard your ad capital</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>14-Day Initial Launch Sprint</strong> (First funnel & ads live by Day 14)</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>Continuous Funnel CRO</strong> (Ongoing monthly A/B testing of headlines & CTAs)</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>Add-On Funnel Expansion</strong> — Build an additional funnel anytime for just $400</li>
+          <li><span class="check-tick"><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span> <strong>100% Technical Delivery Guarantee + Skin-in-the-Game Commitment</strong></li>
+        </ul>
+
+        <div style="text-align: center; margin-bottom: 14px; font-size: 0.9rem; color: #166534; background: #f0fdf4; padding: 10px 14px; border-radius: 8px; border: 1px solid #bbf7d0;">
+          <strong>100% Free Consultation:</strong> Step 1: Request free 1:1 consultation &bull; Step 2: Confirm fit & launch in 14 days ($699/Mo)
+        </div>
+        <a href="#form" class="btn-primary btn-lg" style="width: 100%;">
+          Get Free Consultation <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Section 9: Guarantee Block -->
+      <div class="guarantee-block">
+        <div class="guarantee-seal"><svg class="shield-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>The 100% Technical Delivery Guarantee & Traction Commitment</h3>
+        <p style="margin-bottom: 0.75rem;">
+          <strong>100% Technical Delivery Guarantee:</strong> If we fail to deliver your 1-Hero funnel, write your direct-response copy, install server CAPI with Event Match Quality > 8.5/10, and launch your Meta campaigns within 14 business days, you receive an immediate 100% refund of your first month's $699 retainer.
+        </p>
+        <p style="margin-bottom: 0;">
+          <strong>Skin-in-the-Game Traction Commitment:</strong> If your campaigns have not achieved baseline conversion traction within 30 days of live traffic despite following agreed parameters, we waive our Month 2 management fee and continue engineering fresh copy, new creative packs, and funnel CRO completely free of charge until traction is established.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 10: FAQ Accordion (#faq) -->
+  <section class="section neutral" id="faq">
+    <div class="container text-center">
+      <span class="section-eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+      <h2 class="section-title">Everything You Need To Know Before Partnering</h2>
+      <p class="section-lead">
+        Straightforward, transparent answers to every question you might have about our monthly retainer model.
+      </p>
+    </div>
+    <div class="faq-container">
+      <!-- FAQ 1 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>Why is the retainer only $699/month when agencies charge $4,000/month?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          Traditional agencies carry massive overhead: office rents, account executives, and corporate management layers. We operate as a lean, high-output direct-response studio. You work directly with a senior practitioner with zero middleman overhead.
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>Why do you build 1 Hero Funnel instead of 3?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          Because dividing an early-stage test budget ($1,000–$1,500/month) across 3 funnels starves Meta's algorithm of data ($10/day per page), causing all 3 to fail. Concentrating 100% of your ad spend on 1 Master Hero Funnel (with 2 hook split-test variations) delivers maximum data density, enabling Meta's AI to optimize rapidly and find your winning cost-per-lead.
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>Is sales copywriting really included, or do I have to provide it?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          Copywriting is 100% included. We write all headlines, persuasive narrative, mechanism explanations, objection-handling FAQs, button CTAs, and confirmation page copy for your Hero Funnel and split-tests. You only review and approve.
+        </div>
+      </div>
+      <!-- FAQ 4 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>What happens in Month 2 and beyond for the $699/month fee?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          In Month 2 and beyond, we actively manage your Meta campaigns daily (bidding, cost caps, audience pruning), produce a Monthly Creative Refresh Pack (10–15 fresh ad variations to combat ad fatigue), and run systematic CRO A/B tests on your Hero Funnel to continuously drive down customer acquisition costs.
+        </div>
+      </div>
+      <!-- FAQ Add-On -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>What if I want to launch an additional funnel later?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          Once your primary Hero Funnel is profitable, active retainer clients can deploy an additional custom funnel for an exclusive add-on fee of just $400 one-time (rather than starting a new $699 retainer).
+        </div>
+      </div>
+      <!-- FAQ 5 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>Am I locked into a 3-month or 6-month contract?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          No. We operate strictly on a month-to-month retainer. You can pause or cancel at any time with zero termination penalties. We earn your business every 30 days through real performance.
+        </div>
+      </div>
+      <!-- FAQ 6 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>What ad budget do I need to run Meta Ads?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          We recommend starting with a test ad budget of $30 to $50 per day ($900 - $1,500/month) paid directly to Meta. This provides sufficient conversion data for Meta's neural network without burning cash.
+        </div>
+      </div>
+      <!-- FAQ 7 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>Who actually executes the work on my account?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          Senior Performance Media Buyer Vũ Ngọc Hoàng personally writes your copy, oversees funnel engineering, configures your CAPI, and runs your ads. Your business is never handed off to junior interns.
+        </div>
+      </div>
+      <!-- FAQ 8 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>What tech platforms and domains can you integrate with?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          We build lightning-fast static funnels deployable to Cloudflare, Vercel, WordPress, Shopify subdomains, or your custom domain, and seamlessly integrate with Stripe, Calendly, Make/Zapier, and Meta Events Manager.
+        </div>
+      </div>
+      <!-- FAQ 9 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>What if my offer or business is brand new?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          That is our core specialty. We help you translate your knowledge or service into a sharp, compelling 2-step acquisition funnel, target the right buyers, and validate demand rapidly on Meta.
+        </div>
+      </div>
+      <!-- FAQ 10 -->
+      <div class="accordion">
+        <button class="accordion-head" type="button">
+          <span>How quickly can we start after I submit my application?</span>
+          <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="accordion-body">
+          We review applications within 24 hours. Because we cap our monthly cohort at strictly 4 clients, onboarding is first-come, first-served. Once approved, Month 1 production begins immediately.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 11: Application & Intake Form (#form) -->
+  <section class="section" id="form">
+    <div class="form-wrapper">
+      <div class="form-title">
+        <span class="section-eyebrow" style="margin-bottom: 0.6rem;">100% FREE • NO OBLIGATION • NO ZOOM CALLS</span>
+        <h3>Request Your Free 1:1 Consultation</h3>
+        <p>Leave your business details below. Vũ Ngọc Hoàng will personally review your offer and message you directly via WhatsApp or Email within 24 hours with custom recommendations—100% free with no obligation.</p>
+      </div>
+
+      <form id="intake-form">
+        <!-- Honeypot Field -->
+        <div class="hp-field">
+          <label for="website_hp">Leave this empty</label>
+          <input type="text" id="website_hp" name="website_hp" autocomplete="off" tabindex="-1">
+        </div>
+
+        <div class="form-group">
+          <label for="full_name">Your Full Name *</label>
+          <input type="text" id="full_name" name="full_name" required placeholder="e.g. Alex Miller">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Work Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="alex@yourbusiness.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">WhatsApp or Telegram Number *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 000-0000">
+        </div>
+
+        <div class="form-group">
+          <label for="offer_url">Website, Social Profile, or Offer Link *</label>
+          <input type="url" id="offer_url" name="offer_url" required placeholder="https://yourwebsite.com or LinkedIn profile">
+        </div>
+
+        <div class="form-group">
+          <label for="monthly_budget">Planned Monthly Meta Ad Budget *</label>
+          <select id="monthly_budget" name="monthly_budget" required>
+            <option value="" disabled selected>Select your planned monthly test ad spend</option>
+            <option value="$900 - $1,500/mo ($30-$50/day)">$900 - $1,500 / month ($30 - $50 / day) - Recommended</option>
+            <option value="$1,500 - $3,000/mo">$1,500 - $3,000 / month</option>
+            <option value="$3,000 - $5,000/mo">$3,000 - $5,000 / month</option>
+            <option value="$5,000+/mo">$5,000+ / month (Scaling)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="bottleneck">What is your biggest acquisition bottleneck today? *</label>
+          <textarea id="bottleneck" name="bottleneck" rows="3" required placeholder="e.g. Need high-converting 2-step funnels, haven't set up CAPI, or need an experienced buyer to manage ads so I can focus on delivery..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit" id="submit-btn">
+          <span>Get Free Consultation &rarr;</span>
+          <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="form-trust-note">
+          <svg class="lock-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>100% Free Consultation • No credit card required • No Zoom calls • Hoàng messages you directly via WhatsApp or Email within 24 hours</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sticky Bottom CTA Bar -->
+  <div class="sticky-cta">
+    <div class="sticky-cta-inner">
+      <div class="sticky-cta-text">
+        <h5>The Done-For-You Growth Engine</h5>
+        <p>Flat $699/Mo • 100% Free Consultation via WhatsApp/Email</p>
+      </div>
+      <a href="#form" class="btn-primary" style="padding: 0.8rem 1.8rem; font-size: 0.95rem;">
+        Get Free Consultation <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <p><strong>The Scale Engine</strong> — Direct-Response Growth Partner</p>
+        <p>Senior Performance Media Buyer Vũ Ngọc Hoàng (> $400k+ Meta Spend)</p>
+      </div>
+      <div class="footer-links">
+        <a href="#sow">Deliverables</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#form">Free Consultation</a>
+      </div>
+      <div>
+        <p>© 2026 The Scale Engine. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Accordion Toggle
+    document.querySelectorAll('.accordion-head').forEach(button => {
+      button.addEventListener('click', () => {
+        const accordion = button.parentElement;
+        const isOpen = accordion.classList.contains('open');
+        document.querySelectorAll('.accordion').forEach(a => a.classList.remove('open'));
+        if (!isOpen) {
+          accordion.classList.add('open');
+        }
+      });
+    });
+
+    // Form Submission & CAPI Payload Setup
+    const form = document.getElementById('intake-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Honeypot check
+        const hp = document.getElementById('website_hp').value;
+        if (hp) {
+          console.warn('Bot detected.');
+          return;
+        }
+
+        const btn = document.getElementById('submit-btn');
+        btn.disabled = true;
+        btn.innerHTML = 'Sending Your Details...';
+
+        // Generate unique event_id for deduplication
+        const eventId = 'lead_' + Date.now() + '_' + Math.random().toString(36).substring(2, 9);
+
+        // Fire browser pixel event if available
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', {
+            content_name: 'DFY Growth Retainer Intake',
+            value: 700.00,
+            currency: 'USD'
+          }, { eventID: eventId });
+        }
+
+        // Prepare CAPI payload for backend webhook
+        const payload = {
+          event: 'lead',
+          event_id: eventId,
+          event_time: Math.floor(Date.now() / 1000),
+          full_name: document.getElementById('full_name').value,
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          offer_url: document.getElementById('offer_url').value,
+          monthly_budget: document.getElementById('monthly_budget').value,
+          bottleneck: document.getElementById('bottleneck').value,
+          page_url: window.location.href,
+          user_agent: navigator.userAgent
+        };
+
+        console.log('Payload ready for webhook dispatch:', payload);
+
+        setTimeout(() => {
+          btn.innerHTML = 'Application Received! Redirecting...';
+          alert('Cảm ơn bạn! Thông tin đã được gửi tới Vũ Ngọc Hoàng.\n\nHoàng sẽ trực tiếp xem xét sản phẩm của bạn và nhắn tin lại qua WhatsApp/Email trong vòng 24 giờ để tư vấn miễn phí mà không cần gọi điện thoại hay họp Zoom.');
+          btn.disabled = false;
+          btn.innerHTML = 'Get Free Consultation &rarr;';
+          form.reset();
+        }, 800);
+      });
+    }
+  </script>
+
+<script>
+(function() {
+  var iframeId = 'scale-engine-flagship-iframe';
+  function sendHeight() {
+    var h = Math.max(
+      document.documentElement.scrollHeight,
+      document.body.scrollHeight,
+      document.documentElement.offsetHeight,
+      document.body.offsetHeight
+    );
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({ type: 'resize', height: h, source: iframeId }, '*');
+    }
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  window.addEventListener('message', function(e) {
+    if (e.data && e.data.type === 'request-resize') sendHeight();
+  });
+  setTimeout(sendHeight, 150);
+  setTimeout(sendHeight, 500);
+  setTimeout(sendHeight, 1200);
+  setTimeout(sendHeight, 2500);
+  if (window.MutationObserver) {
+    var observer = new MutationObserver(sendHeight);
+    observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+  }
+
+  // Anchor click handling
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (a && a.getAttribute('href') && a.getAttribute('href').startsWith('#')) {
+      var targetId = a.getAttribute('href').substring(1);
+      var targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+        var rect = targetEl.getBoundingClientRect();
+        var absTop = window.pageYOffset + rect.top;
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'anchor-click', offset: absTop, source: iframeId }, '*');
+        }
+      }
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
