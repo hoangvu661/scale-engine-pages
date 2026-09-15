@@ -1064,12 +1064,8 @@
 (function() {
   var iframeId = 'scale-engine-review-iframe';
   function sendHeight() {
-    var h = Math.max(
-      document.documentElement.scrollHeight,
-      document.body.scrollHeight,
-      document.documentElement.offsetHeight,
-      document.body.offsetHeight
-    );
+    var footer = document.querySelector('footer');
+    var h = footer ? Math.ceil(footer.getBoundingClientRect().bottom + window.pageYOffset) : document.body.scrollHeight;
     if (window.parent && window.parent !== window) {
       window.parent.postMessage({ type: 'resize', height: h, source: iframeId }, '*');
     }

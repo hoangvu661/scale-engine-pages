@@ -52,15 +52,15 @@
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; background-color: #090d16; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-      background: var(--bg-canvas);
+      background-color: #090d16;
       color: var(--text-primary);
       overflow-x: hidden;
       line-height: 1.68;
       font-size: 16px;
-      padding-bottom: 74px; /* Space for sticky bottom bar */
+      padding-bottom: 0;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -69,7 +69,7 @@
     .reveal.active { opacity: 1; transform: translateY(0); }
 
     /* Layout - Section Alternating Rhythm */
-    .section { padding: 5rem 1.25rem; }
+    .section { padding: 5rem 1.25rem; background-color: #ffffff; }
     .section.warm { background: var(--bg-warm); }
     .section.neutral { background: var(--bg-neutral); }
     .container { max-width: 780px; margin: 0 auto; }
@@ -1839,12 +1839,8 @@
 (function() {
   var iframeId = 'scale-engine-flagship-iframe';
   function sendHeight() {
-    var h = Math.max(
-      document.documentElement.scrollHeight,
-      document.body.scrollHeight,
-      document.documentElement.offsetHeight,
-      document.body.offsetHeight
-    );
+    var footer = document.querySelector('footer');
+    var h = footer ? Math.ceil(footer.getBoundingClientRect().bottom + window.pageYOffset) : document.body.scrollHeight;
     if (window.parent && window.parent !== window) {
       window.parent.postMessage({ type: 'resize', height: h, source: iframeId }, '*');
     }
