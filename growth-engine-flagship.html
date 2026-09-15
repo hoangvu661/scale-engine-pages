@@ -892,17 +892,9 @@
     }
     .form-trust-note svg { width: 15px; height: 15px; color: var(--accent); }
 
-    /* Sticky Bottom Bar */
+    /* Sticky Bottom Bar - Hidden inside iframe because pinned bar is on parent window */
     .sticky-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      background: #fff;
-      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
-      padding: 0.75rem 1.25rem;
-      padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+      display: none !important;
     }
     .sticky-cta-inner {
       max-width: 1100px;
@@ -1849,6 +1841,16 @@
   window.addEventListener('resize', sendHeight);
   window.addEventListener('message', function(e) {
     if (e.data && e.data.type === 'request-resize') sendHeight();
+    if (e.data && e.data.type === 'scroll-to-section' && e.data.targetId) {
+      var targetEl = document.getElementById(e.data.targetId);
+      if (targetEl) {
+        var rect = targetEl.getBoundingClientRect();
+        var absTop = window.pageYOffset + rect.top - 65;
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'anchor-click', offset: absTop, source: iframeId }, '*');
+        }
+      }
+    }
   });
   setTimeout(sendHeight, 150);
   setTimeout(sendHeight, 500);

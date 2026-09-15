@@ -1074,6 +1074,16 @@
   window.addEventListener('resize', sendHeight);
   window.addEventListener('message', function(e) {
     if (e.data && e.data.type === 'request-resize') sendHeight();
+    if (e.data && e.data.type === 'scroll-to-section' && e.data.targetId) {
+      var targetEl = document.getElementById(e.data.targetId);
+      if (targetEl) {
+        var rect = targetEl.getBoundingClientRect();
+        var absTop = window.pageYOffset + rect.top - 65;
+        if (window.parent && window.parent !== window) {
+          window.parent.postMessage({ type: 'anchor-click', offset: absTop, source: iframeId }, '*');
+        }
+      }
+    }
   });
   setTimeout(sendHeight, 150);
   setTimeout(sendHeight, 500);
